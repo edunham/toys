@@ -30,10 +30,10 @@ robot = Converser(triggers, objections, outputs, DEBUG=False)
 whatnext = robot.startconvo() 
 
 while(True):
-	"""
+
 	if robot.citewanted(whatnext):
-		topic.cite()
-	"""
+		topic.citethyself()
+
 	if not robot.newtopic(whatnext):
 		topic = robot.followup(whatnext, topic)
 	else:

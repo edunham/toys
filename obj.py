@@ -49,8 +49,8 @@ class Obj(object):
 	def opn(self):
 		self.opener['opened'] = True
 		return self.opener['opener']
-	def getcite(self):
-		return self.sources
+	def citethyself(self):
+		print self.sources
 
 class Mech_Obj(Obj):
 	"""

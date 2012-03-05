@@ -134,15 +134,10 @@ class Converser(object):
 			printy += getrand(self.offtopic)
 			topic = 'offtopic'
 		return (printy, topic)
-"""
+
 	def citewanted(self, theysaid):
-		for c in cite:
+		for c in self.cite:
 			if c in theysaid:
 				return True
 		return False
 
-	def cite(topic):
-		tocite = topic.getcite()
-		for c in tocite:
-			c.print_cite()
-"""
