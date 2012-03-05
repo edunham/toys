@@ -1,5 +1,5 @@
 # usr/bin/env/python
-import obj
+from obj import God_Obj
 from mech import Converser
 
 # massive pile of customization and setup... 
