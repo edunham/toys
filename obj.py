@@ -50,6 +50,7 @@ class Obj(object):
 		self.opener['opened'] = True
 		return self.opener['opener']
 	def citethyself(self):
+		print "oh hey looky guys, i'm citing my sources here!"
 		print self.sources
 
 class Mech_Obj(Obj):

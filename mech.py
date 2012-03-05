@@ -25,23 +25,24 @@ class Converser(object):
 		print "%s, human ." % self.getrand(self.greetings) 
 		topic = self.getrand(self.objections) 
 		print topic.opn() 
-		return raw_input("> ")
+		return (raw_input("> "), topic)
 
 	def newtopic(self, theysaid):
 		"""
 		True if we should move on to a new topic.
 		False if they'd still like to keep talking about the old one
 		"""
-		if self.DEBUG:
+		DEBUG = self.DEBUG
+		if DEBUG:
 			print "DEBUG: in newtopic method, they said %s" % theysaid
 		for a in self.agrees:
 			if a in theysaid:
-				if self.DEBUG:
+				if DEBUG:
 					print "DEBUG: Found %s so they agree" % a
 				return False
 		for d in self.disagrees:
 			if d in theysaid:
-				if self.DEBUG:
+				if DEBUG:
 					print "DEBUG: Found %s, so they disagree" % d
 				return False
 		return True
@@ -51,25 +52,26 @@ class Converser(object):
 		Assume that newtopic method returned False. 
 		This follows up on their remark based on what's available. 
 		"""
-		if self.DEBUG:
+		DEBUG = self.DEBUG
+		if DEBUG:
 			print "DEBUG: entering followup. They said %s, topic is %s" % (theysaid, topic)
 		for d in self.disagrees:
 			if d in theysaid:
 				if topic.has_snarks():
-					if self.DEBUG:
+					if DEBUG:
 						print "DEBUG: the topic has snarks"
 					print topic.rand_snark()
 					return topic
 				else:
-					if self.DEBUG:
+					if DEBUG:
 						print "DEBUG: the topic has no snarks. redundant, then win."
-					print self.getrand(redundant)
+					print self.getrand(self.redundant)
 					print topic.win()
 					topic = 'offtopic'
 					return topic
 		for a in self.agrees:
 			if a in theysaid:
-				if self.DEBUG:
+				if DEBUG:
 					print "DEBUG: they agreed. Printing topic win."
 				print topic.win()
 				topic = 'offtopic'

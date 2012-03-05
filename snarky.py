@@ -6,7 +6,7 @@ from mech import Converser
 # may get outsourced to another fileeventually
 greetings = ("hello","hi","what's up","g'day","greetings")
 segues = ("","","","","")
-agrees = ("yes","re right","you win","i agree","absolutely","re correct","mmhmm")
+agrees = ("sure","yes","re right","you win","i agree","absolutely","re correct","mmhmm")
 disagrees = ("no","re wrong","i don't think so","but")
 cite = ("cite","citation","who said","prove it")
 objections = [God_Obj()]# Mech_Obj, Emo_Obj, Thought_Obj, Text_Obj, Puppet_Obj, Dumb_Obj, Math_Obj, Gender_Obj, Rel8_Obj, Logic_Obj
@@ -27,7 +27,7 @@ robot = Converser(triggers, objections, outputs, DEBUG=False)
 
 # Ok now time for the actual program
 
-whatnext = robot.startconvo() 
+whatnext, topic = robot.startconvo() 
 
 while(True):
 
