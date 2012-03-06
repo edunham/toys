@@ -1,9 +1,11 @@
 # usr/bin/env/python
+
+# For some damn reason, plain old "import obj" breaks things
 from obj import God_Obj, Emo_Obj, Offtopic
-from mech import Converser
+from mech2 import Converser
 
 # massive pile of customization and setup... 
-# may get outsourced to another fileeventually
+# may get outsourced to another file eventually
 greetings = ("hello","hi","what's up","g'day","greetings")
 segues = ("","","","","")
 agrees = ("sure","yes","re right","you win","i agree","absolutely","re correct","mmhmm")
@@ -25,7 +27,7 @@ offtopic = [	'That was off-topic (1)',
 triggers = (greetings, agrees, disagrees, cite, quits)
 outputs = (redundant, offtopic, goodbyes)
 
-robot = Converser(triggers, objections, outputs, DEBUG=False)
+robot = Converser(triggers, objections, outputs, DEBUG=True)
 
 # Ok now time for the actual program
 
