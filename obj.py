@@ -47,6 +47,12 @@ class Obj(object):
 	def is_opened(self):
 		return self.opener['opened']
 
+	def triggered_by(self, comment):
+		for t in self.triggers:
+			if t in comment:
+				return True
+		return False
+
 class Offtopic(Obj):
 	def __init__(self):
 		Obj.__init__(self, [], '', '', '', '')
