@@ -1,5 +1,5 @@
 # usr/bin/env/python
-from obj import God_Obj
+from obj import God_Obj, Emo_Obj, Offtopic
 from mech import Converser
 
 # massive pile of customization and setup... 
@@ -9,7 +9,7 @@ segues = ("","","","","")
 agrees = ("sure","yes","re right","you win","i agree","absolutely","re correct","mmhmm")
 disagrees = ("no","re wrong","i don't think so","but")
 cite = ("cite","citation","who said","prove it")
-quits = ("quit")
+quits = ("quit", "get me out of here")
 goodbyes = ["bye-bye", "see 'ya", "ciao"]
 objections = [God_Obj(), Emo_Obj()]# Mech_Obj, Thought_Obj, Text_Obj, Puppet_Obj, Dumb_Obj, Math_Obj, Gender_Obj, Rel8_Obj, Logic_Obj
 redundant = [	'That was redundant (1)',
@@ -39,7 +39,7 @@ while(True):
 	if robot.quitwanted(whatnext):
 		robot.saygoodbye()
 
-	if not robot.newtopic(whatnext):
+	if not (isinstance(topic, Offtopic) or robot.newtopic(whatnext)):
 		topic = robot.followup(whatnext, topic)
 	else:
 		printy,topic = robot.pickreply(robot.parse(whatnext))

@@ -1,5 +1,5 @@
 from cite import Book
-from obj import God_Obj
+from obj import God_Obj, Emo_Obj, Offtopic
 import random
 
 class Converser(object):
@@ -67,14 +67,14 @@ class Converser(object):
 						print "DEBUG: the topic has no snarks. redundant, then win."
 					print self.getrand(self.redundant)
 					print topic.win()
-					topic = 'offtopic'
+					topic = Offtopic() 
 					return topic
 		for a in self.agrees:
 			if a in theysaid:
 				if DEBUG:
 					print "DEBUG: they agreed. Printing topic win."
 				print topic.win()
-				topic = 'offtopic'
+				topic = Offtopic()
 				return topic
 			
 
@@ -134,7 +134,7 @@ class Converser(object):
 			if DEBUG:
 				print "DEBUG: still nothing to say. user must have been off-topic."
 			printy += getrand(self.offtopic)
-			topic = 'offtopic'
+			topic = Offtopic()
 		return (printy, topic)
 
 	def citewanted(self, theysaid):

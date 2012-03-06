@@ -18,6 +18,41 @@ class Obj(object):
 		self.triggers = triggers
 		self.sources = sources
 
+	def opn(self):
+		self.opener['opened'] = True
+		return self.opener['opener']
+
+	def getcite(self):
+		return self.sources
+
+	def citethyself(self):
+		print self.sources
+
+	def has_snarks(self):
+		if len(self.snarks) == 0:
+			return False
+		return True
+
+	def rand_snark(self):
+		n = random.randint(0,len(self.snarks)-1)
+		s = self.snarks[n]
+		del self.snarks[n]
+		return s
+		
+	def win(self):
+		self.iwin['used'] = True
+		self.opener['closed'] = True
+		return self.iwin['iwin']
+
+	def is_opened(self):
+		return self.opener['opened']
+
+class Offtopic(Obj):
+	def __init__(self):
+		Obj.__init__(self, [], '', '', '', '')
+
+
+
 class Mech_Obj(Obj):
 	"""
 	The Mechanical Objection: 
