@@ -12,7 +12,6 @@ agrees = ("sure","yes","re right","you win","i agree","absolutely","re correct",
 disagrees = ("no","re wrong","i don't think so","but")
 cite = ("cite","citation","who said","prove it")
 quits = ("quit", "get me out of here")
-goodbyes = ["bye-bye", "see 'ya", "ciao"]
 objections = [God_Obj(), Emo_Obj()]# Mech_Obj, Thought_Obj, Text_Obj, Puppet_Obj, Dumb_Obj, Math_Obj, Gender_Obj, Rel8_Obj, Logic_Obj
 redundant = [	'That was redundant (1)',
 		'That was redundant (2)',
@@ -24,28 +23,20 @@ offtopic = [	'That was off-topic (1)',
 		'That was off-topic (3)',
 		'That was off-topic (4)',
 		'That was off-topic (5)']
+movingon = [	'',
+		'',
+		'',
+		'']
+goodbyes = [	"bye-bye", 
+		"see 'ya", 
+		"ciao"]
 triggers = (greetings, agrees, disagrees, cite, quits)
-outputs = (redundant, offtopic, goodbyes)
+outputs = (redundant, offtopic, movingon, goodbyes)
 
 robot = Converser(triggers, objections, outputs, DEBUG=True)
 
 # Ok now time for the actual program
 
-whatnext, topic = robot.startconvo() 
-
 while(True):
 
-	if robot.citewanted(whatnext):
-		topic.citethyself()
-
-	if robot.quitwanted(whatnext):
-		robot.saygoodbye()
-
-	if not (isinstance(topic, Offtopic) or robot.newtopic(whatnext)):
-		topic = robot.followup(whatnext, topic)
-	else:
-		printy,topic = robot.pickreply(robot.parse(whatnext))
-		print printy
-
-	whatnext = raw_input("> ")
 

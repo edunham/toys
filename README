@@ -20,10 +20,8 @@ obj.py is holds Obj, the objection parent class with all the getters and
 	necessary but it's easier to jam all the static conversation bits into 
 	a side file than mess with tweaking a bunch of Obj objects in main
 
-// robot.py is the old complete-robot, known-good at the phase when the only working
-	objection was God_Obj, and probably broken if i've tweaked anything useful
-	in obj.py. Citations not implemented. Unless snarky.py immolates himself
-	the hour before we're turning this thing in, ignore robot.
+robot.py holds default configs (class BuildStandard(debug)) for yer ordinary
+	run-of-the-mill teacher-replacing chatbot.
 
 snarky.py... yay! yells at mech and makes there be a robot, then pokes and prods 
 	at various objections. as of this writing, the triggers passed to mech.py 
