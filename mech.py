@@ -17,12 +17,12 @@ class Converser(object):
 		debug is whether we want things in debug mode
 		"""
 		self.DEBUG = DEBUG
-		self.greetings, self.agrees, self.disagrees, self.cite = triggers
+		self.greetings, self.agrees, self.disagrees, self.cite, self.quits = triggers
 		self.objections = objections
-		self.redundant, self.offtopic = outputs
+		self.redundant, self.offtopic, self.goodbyes = outputs
 
 	def startconvo(self):	
-		print "%s, human ." % self.getrand(self.greetings) 
+		print "%s, human." % self.getrand(self.greetings) 
 		topic = self.getrand(self.objections) 
 		print topic.opn() 
 		return (raw_input("> "), topic)
@@ -143,3 +143,12 @@ class Converser(object):
 				return True
 		return False
 
+	def quitwanted(self, theysaid):
+		for q in self.quits:
+			if q in theysaid:
+				return True
+		return False
+
+	def saygoodbye(self):
+		print self.getrand(self.goodbyes)
+		quit()

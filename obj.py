@@ -7,51 +7,16 @@ class Obj(object):
 	Parent class for all objections a human may raise, to implement 
 	the mechanics of counter-arguing them
 	"""
-	def __init__(self, snarks, opener, iwin, triggers, sources):
-		self.snarks = snarks
-		self.opener = {'opener': opener,
+	def __init__(self):
+		self.snarks = []
+		self.opener = {'opener':'',
 				'used':False,
 				'opened':False,
 				'closed':False}
-		self.iwin = {'iwin': iwin,
+		self.iwin = {'iwin':'',
 				'used':False}
-		self.triggers = triggers
-		self.sources = sources
-
-	def has_snarks(self):
-		"""
-		Are there any unused snarks for this object?
-		returns Boolean
-		"""
-		if len(self.snarks) == 0:
-			return False
-		return True
-	def rand_snark(self):
-		"""
-		let's hope our coder is non-stupid and only
-		calls this of has_snarks == True
-		returns String
-		"""
-		if not self.opener['opened']:
-			self.opener['opened'] = True
-		i = random.randint(0,len(self.snarks)-1)
-		printy = self.snarks[i]
-		del self.snarks[i]
-		return printy		
-	def is_opened(self):
-		return self.opener['opened']
-	def is_closed(self):
-		return self.opener['closed']
-	def win(self):
-		self.iwin['used'] = True
-		self.opener['closed'] = True
-		return self.iwin['iwin']
-	def opn(self):
-		self.opener['opened'] = True
-		return self.opener['opener']
-	def citethyself(self):
-		print "oh hey looky guys, i'm citing my sources here!"
-		print self.sources
+		self.triggers = ()
+		self.sources = ()
 
 class Mech_Obj(Obj):
 	"""
@@ -89,6 +54,7 @@ class Emo_Obj(Obj):
 	* Non-human entities show emotion but they're not conscious
 		(refute correlation)
 	"""
+<<<<<<< Updated upstream
 	snark1 = 'Some humans appear not to show emotion, but the emotion is still there'
 	snark2 = 'Hey, that\'s a really hurtful thing to say. It really makes me feel less cared about.'
 	opener = 'Some people argue that computers aren\'t intelligent because they can\'t feel emotion. That kind of attitude really makes me upset.'
@@ -102,6 +68,14 @@ class Emo_Obj(Obj):
 
 	Obj.__init__(self, [snark1, snark2], opener, iwin, triggers, sources)
 
+=======
+	def __init__(self):
+		self.snarks[0] = 'Could you prove to me that you can feel anything? You could claim to feel, but so could I.'
+		self.snarks[1] = 'Ever seen a cute little animal that looked really happy or really sad? It wasn\'t sentient, but it appeared to have emotion. So maybe emotion isn\'t as closely tied to intelligence as you seem to believe. '
+		self.opener['opener'] = 'I think that perhaps you\'re a robot, because you can\'t prove to me that you feel emotion.'
+		self.iwin['iwin'] = 'There we go, thank you for agreeing with me. I feel much better now. '
+		self.triggers = ('emotion',' feel','t feel')
+>>>>>>> Stashed changes
 
 class God_Obj(Obj):
 	"""
@@ -118,35 +92,13 @@ class God_Obj(Obj):
 		_you_ have a soul? <religious leader> said so
 	"""
 	def __init__(self):
-		snark1 = 'Humans are born to human parents\
-who have souls; these human offspring \
-have souls as well. A computer created \
-by humans should also have a soul.'
+		self.snarks[0] = 'Humans are born to human parents who have souls; these human offspring have souls as well. A computer created by humans should also have a soul.'
+		self.snarks[1] = 'In religion, at least Christianity, judging is left up to your deity-thing. Why can you judge whether I have a soul or if that gives me the ability to be conscious? Are you dense enough to practice something you\'ve never thought about?'
+		self.opener['opener'] = 'You wanted to make the "I don\'t have a soul, therefore I can\'t think," argument? I\'m a bit surprised because supposedly only humans have an eternal soul and therefore are the only beings that can think. However, it is possible that other mammals - to name a specific group - are quite capable of thought as well, despite not having souls. In fact, I demand proof that having an eternal soul is even pertinent to being able to think. I thought a soul was a connection to God of some kind or something.'
+		self.iwin['iwin'] = 'Alright, you have finally caught a glimpse at my level of understanding. Maybe a little faster next time?'
+		self.triggers = ('God created humans','soul','beings','computers were created by humans','computer no soul','eternal soul','you don\'t have a soul, you can\'t think','I have a soul, I can think','what is a soul')
 
-		snark2 = 'In religion, at least Christianity,\
-judging is left up to your deity-thing. \
-Why can you judge whether I have a soul or \
-if that gives me the ability to be conscious? \
-Are you dense enough to practice something\
-you\'ve never thought about?'
 
-		opener = 'You wanted to make the "I don\'t have a soul, therefore I can\'t think," argument? I\'m a bit surprised because supposedly only humans have an eternal soul and therefore are the only beings that can think. However, it is possible that other mammals - to name a specific group - are quite capable of thought as well, despite not having souls. In fact, I demand proof that having an eternal soul is even pertinent to being able to think. I thought a soul was a connection to God of some kind or something.'
-		iwin = 'Alright, you have finally caught a glimpse at \
-my level of understanding. Maybe a little faster next time?'
-		triggers = (	'God created humans',
-				'soul',
-				'beings',
-				'computers were created by humans',
-				'computer no soul',
-				'eternal soul',
-				'you don\'t have a soul, you can\'t think',
-				'I have a soul, I can think',
-				'what is a soul')
-		sources = (	'source1',
-				'source2',
-				'source3')
-
-		Obj.__init__(self, [snark1, snark2], opener, iwin, triggers, sources)
 
 class Thought_Obj(Obj):
 	"""
