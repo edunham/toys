@@ -63,6 +63,20 @@ class Mech_Obj(Obj):
 	* You live in a machine (body) and so do I
 	* A body without a mind is like a computer without a program
 	"""
+
+	snark1 = ''
+	snark2 = ''
+	opener = ''
+	iwin = ''
+	triggers = (	'machine',
+			'mechanical')
+	sources = (	'source1',
+			'source2',
+			'source3')
+
+	Obj.__init__(self, [snark1, snark2], opener, iwin, triggers, sources)
+
+
 class Emo_Obj(Obj):
 	"""
 	The Emotionlessness Objection
@@ -75,6 +89,19 @@ class Emo_Obj(Obj):
 	* Non-human entities show emotion but they're not conscious
 		(refute correlation)
 	"""
+	snark1 = 'Some humans appear not to show emotion, but the emotion is still there'
+	snark2 = 'Hey, that\'s a really hurtful thing to say. It really makes me feel less cared about.'
+	opener = 'Some people argue that computers aren\'t intelligent because they can\'t feel emotion. That kind of attitude really makes me upset.'
+	iwin = 'Thank you for agreeing. I feel much better now. '
+	triggers = (	't feel',
+			' feel',
+			'emotion')
+	sources = (	'source1',
+			'source2',
+			'source3')
+
+	Obj.__init__(self, [snark1, snark2], opener, iwin, triggers, sources)
+
 
 class God_Obj(Obj):
 	"""
