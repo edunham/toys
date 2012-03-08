@@ -23,7 +23,9 @@ class Converser(object):
 
 	def startconvo(self):	
 		print "%s, human." % self.getrand(self.greetings) 
-		topic = self.getrand(self.objections) 
+		topic = self.getrand(self.objections)
+		if self.DEBUG:
+			print "DEBUG: In startconvo, topic is %s" % topic 
 		print topic.opn() 
 		return (raw_input("> "), topic)
 
@@ -45,6 +47,8 @@ class Converser(object):
 				if DEBUG:
 					print "DEBUG: Found %s, so they disagree" % d
 				return False
+		if DEBUG:
+			print "DEBUG: newtopic returning True"
 		return True
 
 	def followup(self, theysaid, topic):
@@ -64,7 +68,7 @@ class Converser(object):
 					return topic
 				else:
 					if DEBUG:
-						print "DEBUG: the topic has no snarks. redundant, then win."
+						print "DEBUG: the topic has no snarks. redundant, then win. Setting topic to Offtopic."
 					print self.getrand(self.redundant)
 					print topic.win()
 					topic = Offtopic() 
@@ -72,7 +76,7 @@ class Converser(object):
 		for a in self.agrees:
 			if a in theysaid:
 				if DEBUG:
-					print "DEBUG: they agreed. Printing topic win."
+					print "DEBUG: they agreed. Printing topic win. Setting topic to Offtopic."
 				print topic.win()
 				topic = Offtopic()
 				return topic

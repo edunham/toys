@@ -1,4 +1,5 @@
 from mech2 import Converser
+import obj
 
 class BuildStandard(Converser):
 	def __init__(self, DEBUG):
@@ -30,17 +31,17 @@ class BuildStandard(Converser):
 		quits = (	"quit", 
 				"get me out of here")
 
-		objections = [	God_Obj(), 
-				Emo_Obj(),
-				# Mech_Obj, 
-				# Thought_Obj, 
-				# Text_Obj, 
-				# Puppet_Obj, 
-				# Dumb_Obj, 
-				# Math_Obj, 
-				# Gender_Obj, 
-				# Rel8_Obj, 
-				# Logic_Obj
+		objections = [	obj.God_Obj(), 
+				obj.Emo_Obj(),
+				# obj.Mech_Obj, 
+				# obj.Thought_Obj, 
+				# obj.Text_Obj, 
+				# obj.Puppet_Obj, 
+				# obj.Dumb_Obj, 
+				# obj.Math_Obj, 
+				# obj.Gender_Obj, 
+				# obj.Rel8_Obj, 
+				# obj.Logic_Obj
 				]
 
 		redundant = [	'That was redundant (1)',
@@ -48,12 +49,12 @@ class BuildStandard(Converser):
 				'That was redundant (3)',]
 
 		offtopic = [	'That was off-topic (1)',
-				'',
-				'']
+				'That was off-topic (2)',
+				'That was off-topic (3)']
 
-		movingon = [	'',
-				'',
-				'']
+		movingon = [	'Well, that\'s enough of that. ',
+				'Let\'s continue. ',
+				'Moving on... ']
 
 		goodbyes = [	"bye-bye", 
 				"see 'ya", 
@@ -63,5 +64,5 @@ class BuildStandard(Converser):
 
 		outputs = (redundant, offtopic, movingon, goodbyes)
 
-		Converser.__init__(triggers, objections, outputs, DEBUG)
+		Converser.__init__(self, triggers, objections, outputs, DEBUG)
 
