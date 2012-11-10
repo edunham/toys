@@ -16,9 +16,10 @@ ss = "series"
 
 class r():
     # one resistor
-    def __init__(self, v):
-        self.v = v
+    def __init__(self, val, tol):
+        self.v = val
         self.s = 1
+        self.t = tol
     def p(self):
         return str(self.v)
 
@@ -30,6 +31,7 @@ class g(r):
         self.r = b          # r = glob on right
         self.c = how        # c = combination method -- STRING
         self.s = a.s + b.s  # s = size, # of total r in glob
+        self.t = a.t + b.t  # t = tolerance, calc'd according to an ECE
     def p(self):
         # override
         return '(' + self.l.p() + ' ' + self.c + ' ' + self.r.p() + ')'
@@ -42,10 +44,11 @@ def in_series(r1, r2):
 
 def makes(l1, l2):
     out = []
+    tol = .05
     for a1 in l1:
-        a = r(a1) if not isinstance(a1, r) else a1
+        a = r(a1, tol) if not isinstance(a1, r) else a1
         for b1 in l2:
-            b = r(b1) if not isinstance(b1, r) else b1
+            b = r(b1, tol) if not isinstance(b1, r) else b1
             c = g(in_parallel(a,b), a, b, pl)
             if DBG: print "appending " + c.p()
             if DBG: print "\t val is " + str(c.v) + " size " + str(c.s)
