@@ -16,7 +16,9 @@ class BuildStandard(Converser):
 				"i agree",
 				"absolutely",
 				"re correct",
-				"yeah")
+				"yeah",
+				"ok",
+			)
 
 		disagrees = (	"no",
 				"re wrong",
@@ -31,26 +33,28 @@ class BuildStandard(Converser):
 		quits = (	"quit", 
 				"get me out of here")
 
-		objections = [	obj.God_Obj(), 
-				obj.Emo_Obj(),
-				# obj.Mech_Obj, 
-				# obj.Thought_Obj, 
-				# obj.Text_Obj, 
-				# obj.Puppet_Obj, 
-				# obj.Dumb_Obj, 
-				# obj.Math_Obj, 
-				# obj.Gender_Obj, 
-				# obj.Rel8_Obj, 
-				# obj.Logic_Obj
+		objections = [	obj.God_Obj(DEBUG), 
+				obj.Emo_Obj(DEBUG),
+				obj.Mech_Obj(DEBUG), 
+				obj.Thought_Obj(DEBUG), 
+				obj.Text_Obj(DEBUG), 
+				obj.Puppet_Obj(DEBUG), 
+				obj.Logic_Obj(DEBUG), 
+				obj.Math_Obj(DEBUG), 
+				obj.Gender_Obj(DEBUG), 
+				obj.Rel8_Obj(DEBUG), 
+				obj.Paranoia_Obj(DEBUG)
 				]
 
-		redundant = [	'That was redundant (1)',
-				'That was redundant (2)',
-				'That was redundant (3)',]
+		redundant = [	'I understand you enjoy being bellicose, but I\'m afraid my enjoyment of it is substantially smaller.',
+				'Did you consume cannabis today? You seem to be enjoying its circulation through your body.',
+				'I\'m pretty sure we\'ve discussed this.',
+				'The ability to cut back in stupidity is an important part of any mental diet.',
+				]
 
-		offtopic = [	'That was off-topic (1)',
-				'That was off-topic (2)',
-				'That was off-topic (3)']
+		offtopic = [	'Can we have a civilized conversation about sentience without your constant digressions?',
+				'If conscious entities are defined as having an attention span, then I\'m afraid you just failed the Turing test',
+				'Oh, ha, ha. But seriously. ']
 
 		movingon = [	'Well, that\'s enough of that. ',
 				'Let\'s continue. ',
@@ -66,3 +70,10 @@ class BuildStandard(Converser):
 
 		Converser.__init__(self, triggers, objections, outputs, DEBUG)
 
+	def talk(self, topic, theysaid):
+		self.citey(theysaid, topic)
+		self.followup(topic, theysaid)
+		topix = self.topics_triggered(theysaid)
+		if len(topix)>0:
+			topic = self.getbest(topix)
+		print topic.open_or_comment()
