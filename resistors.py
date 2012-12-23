@@ -23,6 +23,8 @@ class r():
         self.t = tol
     def p(self):
         return str(self.v)
+    def components(self):
+        return [self.v]
 
 class g(r):
     # glob-of-resistors
@@ -36,12 +38,20 @@ class g(r):
     def p(self):
         # override
         return '(' + self.l.p() + ' ' + self.c + ' ' + self.r.p() + ')'
+    def components(self):
+        combo = self.l.components() + self.r.components()
+        return combo.sort()
 
 def in_parallel(r1, r2):
     return 1/((1/r1.v)+(1/r2.v))
 
 def in_series(r1, r2):
     return r1.v + r2.v
+
+def is_duplicate(g1, g2):
+    if g1.v == g2.v and g1.components() == g2.components():
+        return True
+    return False
 
 def makes(l1, l2):
     out = []
