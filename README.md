@@ -4,6 +4,25 @@ toys
 Small scripts, mostly python, bigger than snippets but smaller than projects. 
 Usually to answer a "what is..." or "how is..." or "can I..." question. 
 
+resistors
+---------
+
+Work in progress, as the values are currently hard-coded and it's generally a
+mess.
+
+When volunteering in the ieee store, I'm occasionally asked for esoteric
+resistor values by novice electrical engineers who don't know how to build the
+value they want from standard components. We have basically unlimited numbers
+of each of a handful of standard resistances, so I wrote this to answer the
+question "how close to the desired value can we build a resistor out of
+standard ones, and how should they be assembled to get that value?"
+
+TODO:
+* Update value lists to something realistic
+* Handle tolerances or value ranges
+* Interactivity and prettier output
+* Tests?!
+
 synonyms
 --------
 
