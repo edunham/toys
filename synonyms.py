@@ -15,6 +15,14 @@ publishing it for posterity.
 """
 
 def get_synonyms(word):
+    """
+    result is in the form of many lines like this: 
+        noun|syn|Word
+    so we split on the | and currently discard part-of-speech and syn data,
+    keeping only the actual synonym. We only want individual words -- nothing
+    with spaces or hyphens.
+    """
+
     print "Looking up " + word + "..."
     url = "http://words.bighugelabs.com/api/2/" + apikey + '/' + word + '/'
     try:
@@ -27,7 +35,7 @@ def get_synonyms(word):
 def all_cousins(word):
     cousins = defaultdict(int)
     siblings = get_synonyms(word)
-    siblings.append(word)
+    siblings.remove(word.lower())
     for s in siblings:
         for w in get_synonyms(s):
             if w not in siblings:
