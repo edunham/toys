@@ -23,5 +23,14 @@ These are:
 * Display 20 or fewer words in this output.
 
 
-
 [apikey]:http://words.bighugelabs.com/getkey.php
+
+
+cyoa-arrays
+-----------
+
+A derpy and short choose-your-own-adventure story, to demonstrate a technique
+for making such games to a newbie coder who didn't want to learn about finite
+state machines or even data structures at the time. Doesn't handle endgames
+gracefully... boo hoo. 
+
