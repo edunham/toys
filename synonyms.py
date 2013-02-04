@@ -20,7 +20,7 @@ def get_synonyms(word):
     try:
         response = urllib2.urlopen(url)
         raw = [l.split('|') for l in response.read().split('\n') if l is not '']
-        return [w[2].lower() for w in raw if ' ' not in w[2]]
+        return [w[2].lower() for w in raw if ' ' not in w[2] and '-' not in w[2]]
     except urllib2.HTTPError:
         return ''
 
