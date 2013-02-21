@@ -47,12 +47,18 @@ def next_tuesday(date):
         date = date + dt.timedelta(days = (8 - wkd)) 
     return date
 
+def z(i):
+    # give two digits. append leading 0 if necessary.
+    if i <= 9:
+        return '0' + str(i)
+    return str(i)
+
 def make_file(mm, dd, yy, wk):
-    mm = str(mm)
-    dd = str(dd)
-    yy = str(yy)
+    mm = z(mm)
+    dd = z(dd)
+    yy = z(yy)
     wk = str(wk)
-    filename = "../OSULUG-Website/content/events/" + yy + '_' + mm + dd + "_wk" + wk + ".mkd"
+    filename = "../OSULUG-Website/content/events/" + yy + mm + dd + "_wk" + wk + ".mkd"
     f = open(filename, 'w')
     lines = [
         'title: Week ' + wk + ' meeting, topic TBD\n',
@@ -77,8 +83,7 @@ def main():
     tues = next_tuesday(startdate)
     for i in range(0, 9): 
         weeknumber = i + 1
-        #make_file(tues.month, tues.day, tues.year, weeknumber)
-        print tues
+        make_file(tues.month, tues.day, tues.year, weeknumber)
         tues = tues + dt.timedelta(weeks = 1)
 
 if __name__ == "__main__":
