@@ -80,12 +80,18 @@ def main():
     if len(sys.argv) < 2: 
         print "Need a date of the format mm/dd/yyyy"
         exit()
-
+    action = 0
+    if len(sys.argv) == 3 and sys.argv[2][0] == 'p':
+       action = 1 
     startdate = get_dt(sys.argv[1])
     tues = next_tuesday(startdate)
     for i in range(0, 9): 
         weeknumber = i + 1
-        make_file(tues.month, tues.day, tues.year, weeknumber)
+        if action == 0:
+            make_file(tues.month, tues.day, tues.year, weeknumber)
+        elif action == 1:
+            print tues
+            
         tues = tues + dt.timedelta(weeks = 1)
 
 if __name__ == "__main__":
