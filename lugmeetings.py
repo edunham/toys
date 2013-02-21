@@ -62,9 +62,11 @@ def make_file(mm, dd, yy, wk):
     f = open(filename, 'w')
     lines = [
         'title: Week ' + wk + ' meeting, topic TBD\n',
-        'datetime: ' + yy + '-' + mm + '-' + dd + ' 18:00:00\n' ,
+        'datetime: ' + yy + '-' + mm + '-' + dd + ' 18:00:00\n',
         'category: events\n',
-        "preview: check back for updates on this week's schedule!\n",
+        'slug: meeting' + yy + mm + dd + '\n'
+        "preview: Discussing check back for updates on this week's schedule!\n",
+        'location: Dearborn 212\n',
         '\n---\n\n',
         'Meeting description goes here\n\n',
         'When: 6pm\n\n', 
