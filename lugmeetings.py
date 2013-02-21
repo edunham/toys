@@ -31,20 +31,20 @@ def get_dt(mmddyyyy):
     # turn mm/dd/yyyy into a datetime date object
     date = mmddyyyy.split('/')
     month = int(date[0])
-    day = int(date[0])
-    year = int(date[0])
+    day = int(date[1])
+    year = int(date[2])
     return dt.date(year, month, day)
 
 def next_tuesday(date):
     # find first tuesday which follows the given date object
     # day:   S M T W R F S
-    # wkd:   0 1 2 3 4 5 6
+    # wkd:   6 0 1 2 3 4 5
     # delta: 2 1 0 6 5 4 3
     wkd = date.weekday()
-    if wkd <= 2: 
-        date = date + dt.timedelta(days = (2 - wkd))
+    if wkd <= 1: 
+        date = date + dt.timedelta(days = (1 - wkd))
     else:
-        date = date + dt.timedelta(days = (9 - wkd)) 
+        date = date + dt.timedelta(days = (8 - wkd)) 
     return date
 
 def make_file(mm, dd, yy, wk):
@@ -77,8 +77,9 @@ def main():
     tues = next_tuesday(startdate)
     for i in range(0, 9): 
         weeknumber = i + 1
-        make_file(tues.month, tues.day, tues.year, weeknumber)
+        #make_file(tues.month, tues.day, tues.year, weeknumber)
+        print tues
         tues = tues + dt.timedelta(weeks = 1)
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
