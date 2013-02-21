@@ -55,30 +55,30 @@ def make_file(mm, dd, yy, wk):
     filename = "../OSULUG-Website/content/events/" + yy + '_' + mm + dd + "_wk" + wk + ".mkd"
     f = open(filename, 'w')
     lines = [
-        'title: Week ' + wk + ': Topic TBD',
-        'datetime: ' + yy + '-' + mm + '-' + dd + ' 18:00:00' ,
-        'category: events',
-        "preview: check back for updates on this week's schedule!",
-        '',
-        '---',
-        '',
-        'Meeting description goes here',
-        '',
-        'When: 6pm', 
-        '',
-        'Where: EECS Library'
+        'title: Week ' + wk + ' meeting, topic TBD\n',
+        'datetime: ' + yy + '-' + mm + '-' + dd + ' 18:00:00\n' ,
+        'category: events\n',
+        "preview: check back for updates on this week's schedule!\n",
+        '\n---\n\n',
+        'Meeting description goes here\n\n',
+        'When: 6pm\n\n', 
+        'Where: EECS Library\n'
         ]
     for l in lines:
         f.write(l)
     f.close()
 
-if len(sys.argv) < 2: 
-    print "Need a date of the format mm/dd/yyyy"
-    exit()
+def main():
+    if len(sys.argv) < 2: 
+        print "Need a date of the format mm/dd/yyyy"
+        exit()
 
-startdate = get_dt(sys.argv[1])
-tues = next_tuesday(startdate)
-for i in range(0, 9): 
-    weeknumber = i + 1
-    make_file(tues.month, tues.day, tues.year, weeknumber)
-    tues = tues + dt.timedelta(weeks = 1)
+    startdate = get_dt(sys.argv[1])
+    tues = next_tuesday(startdate)
+    for i in range(0, 9): 
+        weeknumber = i + 1
+        make_file(tues.month, tues.day, tues.year, weeknumber)
+        tues = tues + dt.timedelta(weeks = 1)
+
+if __name__ == "main":
+    main()
