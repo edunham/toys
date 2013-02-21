@@ -4,6 +4,45 @@ toys
 Small scripts, mostly python, bigger than snippets but smaller than projects. 
 Usually to answer a "what is..." or "how is..." or "can I..." question. 
 
+cyoa-arrays
+-----------
+
+A derpy and short choose-your-own-adventure story, to demonstrate a technique
+for making such games to a newbie coder who didn't want to learn about finite
+state machines or even data structures at the time. Doesn't handle endgames
+gracefully... boo hoo. 
+
+lugmeetings
+-----------
+
+The [lug website][lugsite] is made with [wok][wok], a static website
+generator. Wok is cool because it lets us be very lazy, and we only have to
+write the content. 
+
+[lugsite]:http://lug.oregonstate.edu/
+[wok]:https://github.com/mythmon/wok
+
+However, one does have to create the file for each event manually. With 9
+meetings per term and thus 9 events to create as we plan the term, I
+inevitably screw something up -- change part of an event template that
+shouldn't be changed, or miss changing something in a way that breaks the
+website. 
+
+As a solution, this script automates the process of creating a term's worth of
+meetings with the correct dates and stuff. Grab the term's start date from the
+[course catalog][catalog].
+
+[catalog]:http://catalog.oregonstate.edu/
+
+> # create meetings for the term that starts on april 1, 2013
+> 
+> python lugmeetings.py 04/01/2013
+> 
+> # just print the dates on which the term's meetings will occur
+> 
+> python lugmeetings.py 04/01/2013 print
+
+
 resistors
 ---------
 
@@ -45,11 +84,4 @@ These are:
 [apikey]:http://words.bighugelabs.com/getkey.php
 
 
-cyoa-arrays
------------
-
-A derpy and short choose-your-own-adventure story, to demonstrate a technique
-for making such games to a newbie coder who didn't want to learn about finite
-state machines or even data structures at the time. Doesn't handle endgames
-gracefully... boo hoo. 
 
