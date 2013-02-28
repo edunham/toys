@@ -12,6 +12,22 @@ for making such games to a newbie coder who didn't want to learn about finite
 state machines or even data structures at the time. Doesn't handle endgames
 gracefully... boo hoo. 
 
+debruijn
+--------
+
+A De Bruijn sequence is "a cyclic sequence of a given alphabet A with size k
+for which every possible subsequence of length n in A appears as a sequence of
+consecutive characters exactly once." [[wikipedia]][debruijn].
+
+For reasons tangentially related to an arts and crafts project, I happen to
+want a list of all debruijn sequences B(2,5). Ideally I'd figure out a general
+algorithm to generate arbitrary De Bruijn sequences, but it currently finds
+them by brute force search through all strings of the appropriate alphabet and
+length. 
+
+[debruijn]:http://en.wikipedia.org/wiki/De_Bruijn_sequence 
+
+
 lugmeetings
 -----------
 
