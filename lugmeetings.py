@@ -62,7 +62,8 @@ def make_file(mm, dd, yy, wk):
 
 def main():
     if len(sys.argv) < 2: 
-        print "Need a date of the format mm/dd/yyyy"
+        print "Need first day of term, in the format mm/dd/yyyy"
+        print "`mm/dd/yy print` tells meeting dates without creating files."
         exit()
     action = 0
     if len(sys.argv) == 3 and sys.argv[2][0] == 'p':
