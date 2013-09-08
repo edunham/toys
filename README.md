@@ -100,4 +100,9 @@ These are:
 [apikey]:http://words.bighugelabs.com/getkey.php
 
 
+tux
+---
+
+An adventure in inkscape with trying to make the LUG a logo for T-shirts. Well, it started with Inkscape; 
+who knows where it'll end up. Hopefully with a good-looking kernel source penguin.
 
