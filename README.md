@@ -50,13 +50,13 @@ meetings with the correct dates and stuff. Grab the term's start date from the
 
 [catalog]:http://catalog.oregonstate.edu/
 
-> # create meetings for the term that starts on april 1, 2013
+> create meetings for the term that starts on april 1, 2013
 > 
-> python lugmeetings.py 04/01/2013
+> $ python lugmeetings.py 04/01/2013
 > 
-> # just print the dates on which the term's meetings will occur
+> just print the dates on which the term's meetings will occur
 > 
-> python lugmeetings.py 04/01/2013 print
+> $ python lugmeetings.py 04/01/2013 print
 
 
 resistors
@@ -100,4 +100,9 @@ These are:
 [apikey]:http://words.bighugelabs.com/getkey.php
 
 
+tux
+---
+
+An adventure in inkscape with trying to make the LUG a logo for T-shirts. Well, it started with Inkscape; 
+who knows where it'll end up. Hopefully with a good-looking kernel source penguin.
 
