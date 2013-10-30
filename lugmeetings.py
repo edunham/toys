@@ -31,18 +31,27 @@ def next_tuesday(date):
         date = date + dt.timedelta(days = (8 - wkd)) 
     return date
 
+def prev_tuesday(date):
+    wkd = date.weekday()
+    if wkd <= 1: 
+        date = date - dt.timedelta(days = (1 - wkd))
+    else:
+        date = date - dt.timedelta(days = (8 - wkd)) 
+    return date
+
+
 def z(i):
     # give two digits. append leading 0 if necessary.
     if i <= 9:
         return '0' + str(i)
     return str(i)
 
-def make_file(mm, dd, yy, wk):
+def make_file(mm, dd, yy, wk, prefix = "../OSULUG-Website/content/events/"):
     mm = z(mm)
     dd = z(dd)
     yy = z(yy)
     wk = str(wk)
-    filename = "../OSULUG-Website/content/events/" + yy + mm + dd + "_wk" + wk + ".mkd"
+    filename = prefix + yy + mm + dd + "_wk" + wk + ".mkd"
     f = open(filename, 'w')
     lines = [
         'title: Week ' + wk + ' meeting, topic TBD\n',
@@ -60,6 +69,8 @@ def make_file(mm, dd, yy, wk):
         f.write(l)
     f.close()
 
+def back_one_week(wk1):
+    pass
 def main():
     if len(sys.argv) < 2: 
         print "Need first day of term, in the format mm/dd/yyyy"
@@ -75,7 +86,7 @@ def main():
         if action == 0:
             make_file(tues.month, tues.day, tues.year, weeknumber)
         elif action == 1:
-            print tues
+            print str(tues) + " week " + str(weeknumber)
             
         tues = tues + dt.timedelta(weeks = 1)
 
