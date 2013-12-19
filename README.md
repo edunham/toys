@@ -27,6 +27,14 @@ length.
 
 [debruijn]:http://en.wikipedia.org/wiki/De_Bruijn_sequence 
 
+fixer
+-----
+
+Fixes tables. Specifically, takes tables garbled by wiki2rst.py and makes them 
+prettily sphinxified.
+
+TODO: Allow setting arbitrary max column widths and wrapping all lines which exceed them.
+
 
 lugmeetings
 -----------
