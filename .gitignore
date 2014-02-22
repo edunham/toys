@@ -1,3 +1,5 @@
 *.py[cod]
-*.txt
+chatbot/*.txt
 *.sw[op]
+*.lock
+*.out
