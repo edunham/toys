@@ -19,8 +19,9 @@ def get_freqs(fn = 'a440'):
     lines = [l.split() for l in fd.readlines()]
     lines = [[l[0], float(l[1]), float(l[2])] for l in lines]
     fd.close()
+    return lines
 
-def scale(f, note, type='major'):
+def scale(f, root, type='major'):
     scales = {'major':[2, 2, 1, 2, 2, 2, 1],
               'natural minor':[2, 1, 2, 2, 1, 2, 2],
               'melodic minor':[2, 1, 2, 2, 2, 2, 1], # nat. minor when descending
@@ -28,10 +29,18 @@ def scale(f, note, type='major'):
               'chromatic':[1,1,1,1,1,1,1,1,1,1,1,1,1],
               }
               # pentatonic is all strange though
-    
+    names = [l[0] for l in f]
+    out = [root]
+    scale = scales[type]
+    idx = names.index(root)
+    for i in scale:
+        idx = idx + i
+        out.append(names[idx])
+    return out
 
 def main():
     f = get_freqs()
+    print scale(f, 'A2')
     strings = ['E4', 'B3', 'G3', 'D3', 'A2', 'E2']    
 
 if __name__ == "__main__":
