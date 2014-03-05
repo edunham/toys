@@ -13,6 +13,14 @@ class Tab():
     def pprint(self):
         pass
 
+def print_tab(notes, f): # calling the note list f is dumb and i need it everywhere
+    strings = ['E4', 'B3', 'G3', 'D3', 'A2', 'E2']
+    n_frets = 15
+    frets = []
+    for s in len(strings):
+        start = f.index(strings[s])
+        frets[s] = f[start:start+15]
+
 def get_freqs(fn = 'a440'):
     fd = open(fn, 'r')
     # each lines is note name, frequency in Hz, wavelength in cm
