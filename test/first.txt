@@ -1,17 +1,10 @@
-Aa
-aa
-a A.
-b
-B
-     b
-   B
-c
-D
-Ee
-EE
-ee
-f
-g
-hh
-H h.
-h h
+This sentence should remain.
+This sentence should remain
+this sentence should remain
+Second Sentence
+Third Sentence
+Fourth sentence
+Fourth Sentence.
+fifth sentence
+sixth sentence
+sixth sentence.
