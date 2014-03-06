@@ -32,13 +32,13 @@ def dedup_lines(pathtofile):
     last = ''
     for l in old.readlines():
         m = l.lower().translate(None, ":,;!@#$%^&*()[]?. /\#-") # munge string
-
         if last == m: 
             group.append(l)
         else:
-            write_best(group, new)
+            write_best(group, new)# This will write unless group empty
             group = [l]
             last = m
+    write_best(group, new) # don't forget that last line!
     old.close()
     new.close()
     bash = 'rm ' + pathtofile + '; mv ' + pathtofile + '-new ' + pathtofile
