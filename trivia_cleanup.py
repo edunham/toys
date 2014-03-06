@@ -31,7 +31,7 @@ def dedup_lines(pathtofile):
     group = []
     last = ''
     for l in old.readlines():
-        m = l.lower().translate(None, ":,;!@#$%^&*()[]?. /\#-") # munge string
+        m = l.lower().translate(None, punctuation + ' ') # munge string
         if last == m: 
             group.append(l)
         else:
