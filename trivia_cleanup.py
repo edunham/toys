@@ -1,6 +1,7 @@
 #! /usr/bin/env python2.7
 import subprocess
 import os
+import re
 from string import punctuation
 
 dir = '/home/miea/repos/triviabot/questions/'
@@ -44,8 +45,32 @@ def dedup_lines(pathtofile):
     bash = 'rm ' + pathtofile + '; mv ' + pathtofile + '-new ' + pathtofile
     os.system(bash)
 
+def tagstrip(quiz):
+    tags = ['category', 'category', 'music', 'tv/movies',
+            'trivia', 'games', 'general', 'general knowledge',
+            'geographic', 'geographic trivia', 'geography', 
+            'astrology', 'astronomy', 'useless trivia', 
+            'what word means']
+    q = quiz.split(':')
+    for el in q:
+        if el.strip().lower() in tags:
+            q.remove(el)
+    return ' '.join(x.strip() for x in q)
+
+def strip_tags(pathtofile):
+    print "Stripping tags from " + pathtofile
+    old = open(pathtofile, 'r')
+    new = open(pathtofile + '-new', 'w')
+    for l in old.readlines():
+        new.write(tagstrip(l))
+    old.close()
+    new.close()
+    bash = 'rm ' + pathtofile + '; mv ' + pathtofile + '-new ' + pathtofile
+    os.system(bash)
+
 def main():
     files = os.listdir(dir)
     for f in files:
-        dedup_lines(dir + f)
+        # dedup_lines(dir + f)
+        strip_tags(dir + f)
 main()
