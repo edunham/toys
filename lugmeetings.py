@@ -59,7 +59,7 @@ def make_file(mm, dd, yy, wk, prefix = "../OSULUG-Website/content/events/"):
         'category: events\n',
         'slug: meeting' + yy + mm + dd + '\n'
         "preview: Check back for updates on this week's schedule\n",
-        'location: KEC 1007\n',
+        'location: KEC 1005\n',
         '\n---\n\n',
         'There will be a meeting this week. We\'ll update this page when we know what it is.\n\n',
         'When: 6pm\n\n', 
