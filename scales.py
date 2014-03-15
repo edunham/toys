@@ -13,13 +13,26 @@ class Tab():
     def pprint(self):
         pass
 
-def print_tab(notes, f): # calling the note list f is dumb and i need it everywhere
+def print_tab(notes, freqs):
+    names = [l[0] for l in freqs]
     strings = ['E4', 'B3', 'G3', 'D3', 'A2', 'E2']
+    stringnames = ['E','B','G','D','A','e']
     n_frets = 15
     frets = []
-    for s in len(strings):
-        start = f.index(strings[s])
-        frets[s] = f[start:start+15]
+    for s in range(len(strings)):
+        start = names.index(strings[s])
+        frets.append(names[start:start+15])
+    """
+    e ------------------------------------------------
+    b ------------------------------------------------
+    g ------------------------------------------------
+    d ------------------------------------------------
+    a ------------------------------------------------
+    E ------------------------------------------------
+    """
+    for s in range(len(strings)):
+        print stringnames[s] + ' -' + '-'.join(frets[s])
+        
 
 def get_freqs(fn = 'a440'):
     fd = open(fn, 'r')
@@ -29,7 +42,7 @@ def get_freqs(fn = 'a440'):
     fd.close()
     return lines
 
-def scale(f, root, type='major'):
+def scale(freqs, root, type='major'):
     scales = {'major':[2, 2, 1, 2, 2, 2, 1],
               'natural minor':[2, 1, 2, 2, 1, 2, 2],
               'melodic minor':[2, 1, 2, 2, 2, 2, 1], # nat. minor when descending
@@ -37,7 +50,7 @@ def scale(f, root, type='major'):
               'chromatic':[1,1,1,1,1,1,1,1,1,1,1,1,1],
               }
               # pentatonic is all strange though
-    names = [l[0] for l in f]
+    names = [l[0] for l in freqs]
     out = [root]
     scale = scales[type]
     idx = names.index(root)
@@ -47,9 +60,9 @@ def scale(f, root, type='major'):
     return out
 
 def main():
-    f = get_freqs()
-    print scale(f, 'A2')
-    strings = ['E4', 'B3', 'G3', 'D3', 'A2', 'E2']    
+    freqs = get_freqs()
+    test_scale = scale(freqs, 'A2')
+    print_tab(test_scale, freqs)
 
 if __name__ == "__main__":
     main()
