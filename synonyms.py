@@ -3,7 +3,7 @@ import urllib2
 from collections import defaultdict
 import operator
 
-apikey = ""
+apikey = "59383480e751c6f844b6bf431ebd7b31"
 
 """
 API key should be a string of letters and numbers obtained by pressing buttons
@@ -35,7 +35,8 @@ def get_synonyms(word):
 def all_cousins(word):
     cousins = defaultdict(int)
     siblings = get_synonyms(word)
-    siblings.remove(word.lower())
+    if word.lower() in siblings:
+        siblings.remove(word.lower())
     for s in siblings:
         for w in get_synonyms(s):
             if w not in siblings:
