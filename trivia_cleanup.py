@@ -46,6 +46,7 @@ def dedup_lines(pathtofile):
     os.system(bash)
 
 def tagstrip(quiz):
+    print quiz
     tags = ['category', 'category', 'music', 'tv/movies',
             'trivia', 'games', 'general', 'general knowledge',
             'geographic', 'geographic trivia', 'geography', 
@@ -55,7 +56,8 @@ def tagstrip(quiz):
     for el in q:
         if el.strip().lower() in tags:
             q.remove(el)
-    return ' '.join(x.strip() for x in q)
+    out = ' '.join(x.strip() for x in q)
+    return out
 
 def strip_tags(pathtofile):
     print "Stripping tags from " + pathtofile
