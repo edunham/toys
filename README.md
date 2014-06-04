@@ -4,6 +4,18 @@ toys
 Small scripts, mostly python, bigger than snippets but smaller than projects. 
 Usually to answer a "what is..." or "how is..." or "can I..." question. 
 
+cc
+--
+
+Dropping the Cookie Clicker token thingy here so I can finally have peace.
+
+chatbot
+-------
+
+A bad idea from a writing class a long time ago. It's supposed to argue that
+it's sentient. I didn't know things about software architecture at the time,
+but I tried anyways.
+
 cyoa-arrays
 -----------
 
@@ -35,6 +47,11 @@ prettily sphinxified.
 
 TODO: Allow setting arbitrary max column widths and wrapping all lines which exceed them.
 
+freq
+----
+
+Guesses what symbol goes with what English letter when given a file with
+space-separated symbols, of letter-to-symbol encrypted English (probably).
 
 lugmeetings
 -----------
@@ -67,6 +84,24 @@ meetings with the correct dates and stuff. Grab the term's start date from the
 > $ python lugmeetings.py 04/01/2013 print
 
 
+names
+-----
+
+WIP.
+
+
+orcbot
+------
+
+A great misfortune of C that didn't deserve its own repo.
+
+
+playlistmaker
+-------------
+
+For the Mbox project. See docstrings in the file for links.
+
+
 resistors
 ---------
 
@@ -86,6 +121,15 @@ TODO:
 * Interactivity and prettier output
 * Tests?!
 
+
+scales
+------
+
+Every so often I attempt to teach myself some music theory. This might be to
+try to do maths about guitars. Incomplete, and rather tricky to test without
+already grokking music theory.
+
+
 synonyms
 --------
 
@@ -104,8 +148,13 @@ These are:
 * If listing any words of that occurred a particular number of times, list all of the words which occurred that often
 * Display 20 or fewer words in this output.
 
-
 [apikey]:http://words.bighugelabs.com/getkey.php
+
+
+trivia cleanup
+--------------
+
+For automating the repair of https://github.com/rawsonj/triviabot
 
 
 tux
@@ -114,3 +163,15 @@ tux
 An adventure in inkscape with trying to make the LUG a logo for T-shirts. Well, it started with Inkscape; 
 who knows where it'll end up. Hopefully with a good-looking kernel source penguin.
 
+
+unloved
+-------
+
+Finds least-recently-active Git repo in a directory full of them.
+
+
+wordmatch
+---------
+
+Nothing to worry about here, move along. Was trying to brute-force some
+puzzles. 
