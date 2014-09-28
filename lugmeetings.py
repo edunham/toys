@@ -76,7 +76,7 @@ def make_file(mm, dd, yy, wk, prefix = "../OSULUG-Website/content/events/"):
 def main():
     if len(sys.argv) < 2: 
         print "Need first day of term, in the format mm/dd/yyyy"
-        print "`mm/dd/yy print` tells meeting dates without creating files."
+        print "`mm/dd/yyyy print` tells meeting dates without creating files."
         exit()
     action = 0
     if len(sys.argv) == 3 and sys.argv[2][0] == 'p':
@@ -89,7 +89,6 @@ def main():
             make_file(tues.month, tues.day, tues.year, weeknumber)
         elif action == 1:
             print str(tues) + " week " + str(weeknumber)
-            
         tues = tues + dt.timedelta(weeks = 1)
 
 
