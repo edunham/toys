@@ -32,3 +32,10 @@ like shown on battery history) to make better picture of how time is spent
         willingness to touch Android
 
 make personal site cool like about page of http://maryrosecook.com/
+
+*new internet*: automatically hide all links to anything it knows you've seen
+before -- gracefully skip repeated images by repeating whatever action got you
+the new one (rightarrow), gray out URLs, count how often a URL is linked from
+things you browse. Visualize net of the internet pages one actually visits,
+and net of "potential interests" that're often linked from things you go to
+but haven't been clicked yet. 
