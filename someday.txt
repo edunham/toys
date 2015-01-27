@@ -8,3 +8,27 @@ Plushies:
 Cthulhu pony https://twitter.com/io9/status/418831597593690112/photo/1
 
 animatronic LoL poro
+
+talks/projects:
+---------------
+
+apply psych principles (conditioning, spaced repetition, whatever else) to UI
+so computer can train person to accomplish goals
+    prereqs:
+        goals (quantified etc.)
+        willingness to write UI stuff
+        test subjects
+
+figure out natural-ish makeup to fool security cameras
+    prereqs: 
+        samples of face recognition software
+        makeup
+        volunteers?
+
+time management stuff that uses phone debug data dump (screen on times, etc,
+like shown on battery history) to make better picture of how time is spent
+    prereqs:
+        clearer goal
+        willingness to touch Android
+
+make personal site cool like about page of http://maryrosecook.com/
