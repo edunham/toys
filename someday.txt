@@ -38,4 +38,17 @@ before -- gracefully skip repeated images by repeating whatever action got you
 the new one (rightarrow), gray out URLs, count how often a URL is linked from
 things you browse. Visualize net of the internet pages one actually visits,
 and net of "potential interests" that're often linked from things you go to
-but haven't been clicked yet. 
+but haven't been clicked yet.
+
+Bobcat Box of Books: kinda like http://www.bobcatinabox.com/ but $5/month and
+send books it thinks you'll like, or which complete your collection, or w/e 
+    prereqs: 
+        home library catalog type sw
+        db of similarities between books -- Dewey + Amazon ratings??
+        willingness (or painlessness) to actually catalog all existing books
+            -- maybe catalog input by ISBN and prints a QR to stick on the
+            spine so a photo of the shelf can tell you what's on it via OCR?
+        more space to store books
+            -- maybe include a thing for automatically auctioning disliked or
+            irrelevant books from collection, to fund the habit of acquiring
+            more?
