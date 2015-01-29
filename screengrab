@@ -1,0 +1,6 @@
+#! /bin/bash
+
+# this goes into /usr/bin. chmod +x. then dmenu can see it.
+
+scrot -s "$HOME/screenshots/%Y-%m-%d-%H%M%S_\$wx\$h.png"
+
