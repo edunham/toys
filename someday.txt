@@ -52,3 +52,11 @@ send books it thinks you'll like, or which complete your collection, or w/e
             -- maybe include a thing for automatically auctioning disliked or
             irrelevant books from collection, to fund the habit of acquiring
             more?
+
+Label the Cookies
+-----------------
+
+http://edunham.net/2015/02/04/please_license_your_code.html would do super
+well with a thingy that uses the GitHub API and you give it a GH username and
+it looks at all their public repos and repos contributed to and points out
+which ones are missing a LICENSE file
