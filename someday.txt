@@ -60,3 +60,10 @@ http://edunham.net/2015/02/04/please_license_your_code.html would do super
 well with a thingy that uses the GitHub API and you give it a GH username and
 it looks at all their public repos and repos contributed to and points out
 which ones are missing a LICENSE file
+
+
+vanity domains
+--------------
+
+put in a precise nick and it finds for each 2 or 3-char substring whether a)
+that's a TLD, b) the stuff before it is available as a domain. 
