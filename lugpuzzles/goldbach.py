@@ -8,7 +8,7 @@ To run:
     pypy goldbach.py
 
 """
-
+ops = 0
 goldbach = 33
 i = 0
 while(True):
@@ -22,6 +22,7 @@ while(True):
         goldbach += 2 # NOT COMPOSITE
     else:
         for p in potentials:
+            ops += 3
             mth =  math.sqrt((goldbach - p) / 2.0)
             if mth == int(mth): # nasty hax to check it's square of int
                 breakdown = [p, mth]
@@ -30,4 +31,7 @@ while(True):
         else:
             print "we have a winner!"
             print goldbach
+            print "how many operations: " + str(ops)
+            print "at one operation per minute, years to calculate by hand: "
+            print ops/(60*24*7*52.0)
             exit()
