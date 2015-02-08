@@ -1,6 +1,14 @@
 from primes import primes
 import math
 
+""""
+To run: 
+
+    yaourt -S pypy
+    pypy goldbach.py
+
+""""
+
 goldbach = 33
 i = 0
 while(True):
