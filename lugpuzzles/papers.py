@@ -1,4 +1,9 @@
 """
+
+Invoke with $ pypy papers.py
+
+------------------------------------------------------------------------------
+
 After first cutting there's A2, A3, A4, and A5. 
 
 Expected # of times there's ONLY ONE SHEET LEFT
@@ -9,7 +14,9 @@ all but A4.
 Min # of times is if he always draws the largest piece, so only once will
 there be a single sheet, when it's the last. 
 """
+
 import random
+import sys
 
 class PaperDudeSim():
     def __init__(self):
@@ -56,14 +63,27 @@ def simulatePaperDudes(n):
 if __name__ == "__main__":
 
 
-    print """I expect that the printer always grabs the largest page left,
+    print """
+    I expect that the printer always grabs the largest page left,
     because it is the first one his hand comes to when he reaches into the
     envelope. Thus, the number of times which he is expected by me to find
     only a single sheet is 0.000000, since the directions said to exclude the
     final remaining A5 sheet.\n"""
 
-    print """However, if you want to simulate a bunch of highly unrealistic
+    print """
+    However, if you want to simulate a bunch of highly unrealistic
     little paper dudes who sort past a larger paper to get at a small one for
-    the sake of 'randomness', here goes."""
+    the sake of 'randomness', here goes.\n"""
 
-    simulatePaperDudes(10000000)
+    sim = 10000000
+    if len(sys.argv) > 1:
+        print "simulating " + sys.argv[1] + " paper dudes"
+        try:
+            sim = int(sys.argv[1])
+        except:
+            print "try that with a number. defaulting to " + str(sim)
+
+    print """\n
+    Here's how often, on average, our imaginary paper-cutting friends
+    found a single page:\n"""
+    simulatePaperDudes(sim)
