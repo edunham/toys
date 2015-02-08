@@ -13,4 +13,6 @@ there be a single sheet, when it's the last.
 print """I expect that the printer always grabs the largest page left, because
 it is the first one his hand comes to when he reaches into the envelope. Thus,
 the number of times which he is expected by me to find only a single sheet is
-1.000000, which is when he removes the final remaining A5 sheet."""
+0.000000, since the directions said to exclude the final remaining A5 sheet."""
+
+
