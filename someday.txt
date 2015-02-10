@@ -67,3 +67,11 @@ vanity domains
 
 put in a precise nick and it finds for each 2 or 3-char substring whether a)
 that's a TLD, b) the stuff before it is available as a domain. 
+
+falling off the internet
+------------------------
+
+of own browsing/download history, find what's NOT on archive.org
+
+combine  http://domaininferno.com/ and archive.org to find the content that
+has lost its names
