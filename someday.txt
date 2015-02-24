@@ -75,3 +75,25 @@ of own browsing/download history, find what's NOT on archive.org
 
 combine  http://domaininferno.com/ and archive.org to find the content that
 has lost its names
+
+reed->read->red
+---------------
+
+i want a thing to track stuff i ought to read eventually. it ought not tell
+others, except perhaps publishing summaries/reviews. ought to save a URL of a
+post, or download a PDF, or track paper-books, with equal (hopefully lack of)
+difficulty. 
+
+could(should)? be command line. might be awkward to enter paperbook data; json
+perhaps?
+
+get: command that records a paperbook title or article topic to encourage
+finding it later
+
+reed: command that adds a specific instance of something i have access to and
+ought to read, but haven't time right away.
+
+read: command that gives me something to read, when i have time but not ideas. 
+
+red: some kind of action, summary or review, to take upon having successfully
+read a thing. 
