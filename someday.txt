@@ -87,13 +87,55 @@ difficulty.
 could(should)? be command line. might be awkward to enter paperbook data; json
 perhaps?
 
-get: command that records a paperbook title or article topic to encourage
-finding it later
+    get: command that records a paperbook title or article topic to encourage
+        finding it later
 
-reed: command that adds a specific instance of something i have access to and
-ought to read, but haven't time right away.
+    reed: command that adds a specific instance of something i have access to
+        and ought to read, but haven't time right away.
 
-read: command that gives me something to read, when i have time but not ideas. 
+    read: command that gives me something to read, when i have time but not
+        ideas. 
 
-red: some kind of action, summary or review, to take upon having successfully
-read a thing. 
+    red: some kind of action, summary or review, to take upon having
+        successfully read a thing. 
+
+oh also, sorting between topics/hats would be rather nice. dev, ops, psych,
+philosophy, robots, meta, news, etc. possibly also handle time constraints?
+
+this might be implement-able as a Taskwarrior plugin. perhaps a 'read' in
+/usr/bin that'd swap out the current task in i3bar??
+
+music generated from the environment
+------------------------------------
+
+listening to the mirror's edge soundtrack
+https://www.youtube.com/watch?v=Y05wiQQbFLU at the recommendtation of
+http://imgur.com/gallery/fULGO thinking about how ambient, electronic music
+could be used as a 6th sense, of sorts, to monitor IoT devices' state. when
+something's working correctly it sings along with the house; when off it's
+quiet; when something is going wrong with it, it gets discordant. 
+
+could be a gentler reminder of time-sensitive tasks by gradually transitioning
+into the times when actions need to be taken, reducing the amount of interrupt
+-- for instance, what if the microwave crescendo'd and accelerando'd and then
+quit when the food was done, rather than just humm and then beep? the parents'
+washing machine plays a little tune when the wash is done rather than
+screeching like the drier does, and although it's less unpleasant, it's also
+really confusing when random music starts out of nowhere. 
+
+background tempo, pitch, and beats should probably be environmental
+temperature, presence/absence in room, electricity usage, etc. 
+
+end goal is to hack greater connectedness with environment via enjoyable,
+non-interruptey, subconscious musical cues. 
+
+same thing could potentially be done with systems monitoring -- chunk each
+time segment of traffic into a beat, give a rhythm pattern to each service
+being monitored, volume is the load on that particular server. i hypothesize
+that this would leverage auditory pattern recognition to earlier detect
+errors, in the same way that graphs leverage visual pattern recognition. maybe
+i'm just a '90s kid but i still vividly recall the tone pattern of the modem
+dialing our ISP back in the day, and could tell from any deviations in the
+pattern whether it was connecting successfully or not... and that was like
+half my life ago. also, stick in a particular melody or "hook" for debug
+tracing? 
