@@ -143,3 +143,14 @@ tracing?
 possible collaboration between houses, as well -- refrigerator could put its
 chill cycle after fitbit says you're asleep; appliances could do their
 white-noise thing to mask it when the neighbors are being loud. 
+
+hieroglyph2beamer
+-----------------
+
+rst2pdf does not meet my needs. sphinx latex builder is too general-purpose.
+
+http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc
+is a pandoc thing i guess; http://johnmacfarlane.net/pandoc/demos.html
+suggests it might be the answer. need to test that out.
+
+
