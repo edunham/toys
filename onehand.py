@@ -42,19 +42,25 @@ def dump_hands():
     pickle.dump( rh, open( "right.hand", "wb" ) )
     pickle.dump( lh, open( "left.hand", "wb" ) )
 
+def nuke_a_letter(w):
+    return w #TODO fix all this
+    if len(w) < 3:
+        return w
+    n = 2 #TODO randomly pick which letter to omit
+    if choice([True, False]):
+        return + w[:-n]+w[-(n+1):]
+    else:
+        return w[:-n]+w[-(n-1):]
+
+
 def correcthorse(c):
     nl = notletters(righthand)
     rh = pickle.load( open( "right.hand", "rb" ) )
     pas = ''
     for i in range(c):
         w = choice(rh)
-        n = choice(range(len(w)+1))
         if choice([True, False]):
-            # duplicate or omit a letter
-            if choice([True, False]):
-                pas = pas + w[:-n]+w[-(n+1):]
-            else:
-                pas = pas + w[:-n]+w[-(n-1):]
+            w = nuke_a_letter(w)
         else:
             if choice([True, False]):
                 pas = pas + w
