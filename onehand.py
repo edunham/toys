@@ -2,9 +2,11 @@
 
 # I assume https://github.com/vinces1979/pwgen/ knows what he's doing, so I'll
 # get entropy the same way
-from random import SystemRandom
+import random
 import string
-choice = SystemRandom.choice
+import pickle
+
+choice = random.choice
 
 righthand = ['7', '8', '9', '0', '-', '=', '&', '*', '(', ')', '_', '+', 'y',
 'u', 'i', 'o', 'p', '[', ']', '\\', 'Y', 'U', 'I', 'O', 'P', '{', '}', '|',
@@ -22,7 +24,7 @@ def typeable(word, hand):
             return False
     return True
 
-def correcthorse(hand, words):
+def handedwords(hand, words):
     handed = []
     for w in words:
         w = w.strip(' \t\n\r')
@@ -33,11 +35,34 @@ def correcthorse(hand, words):
 def notletters(maybeletters):
     return [m for m in maybeletters if not m in string.ascii_letters]
 
-print notletters(righthand)
+def dump_hands():
+    wordfile = '/home/miea/repos/toys/wordfile'
+    rh = handedwords(righthand, open(wordfile))
+    lh = handedwords(lefthand, open(wordfile))
+    pickle.dump( rh, open( "right.hand", "wb" ) )
+    pickle.dump( lh, open( "left.hand", "wb" ) )
 
-testwords = ['loop', 'moon', 'manatee', 'sadder', 'hodor' ]
-#correcthorse(righthand, testwords)
-#correcthorse(righthand, open('/home/miea/repos/toys/wordfile'))
-#correcthorse(righthand, open('/usr/share/dict/words'))
+def correcthorse(c):
+    nl = notletters(righthand)
+    rh = pickle.load( open( "right.hand", "rb" ) )
+    pas = ''
+    for i in range(c):
+        w = choice(rh)
+        n = choice(range(len(w)+1))
+        if choice([True, False]):
+            # duplicate or omit a letter
+            if choice([True, False]):
+                pas = pas + w[:-n]+w[-(n+1):]
+            else:
+                pas = pas + w[:-n]+w[-(n-1):]
+        else:
+            if choice([True, False]):
+                pas = pas + w
+            else:
+                for q in range(choice(range(i))):
+                    pas = pas + choice(nl)
+    return pas
 
-
+#dump_hands()
+for i in range(20):
+    print correcthorse(i)
