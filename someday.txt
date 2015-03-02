@@ -153,4 +153,8 @@ http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc
 is a pandoc thing i guess; http://johnmacfarlane.net/pandoc/demos.html
 suggests it might be the answer. need to test that out.
 
+extra brain
+-----------
 
+do a full arch install on a 64GB USB stick. possibly rsync my ssd onto it
+weekly.
