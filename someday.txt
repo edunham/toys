@@ -33,6 +33,8 @@ like shown on battery history) to make better picture of how time is spent
 
 slides tools stuff (bridge?)
 
+algorithmic complexity and you (in progress)
+
 projects
 --------
 
@@ -163,3 +165,8 @@ extra brain
 
 do a full arch install on a 64GB USB stick. possibly rsync my ssd onto it
 weekly.
+
+something for tracking all these damn projects
+-----------------------------------------------
+
+vague ideas, status, idea groups, in-progresses, research.
