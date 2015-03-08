@@ -31,6 +31,11 @@ like shown on battery history) to make better picture of how time is spent
         clearer goal
         willingness to touch Android
 
+slides tools stuff (bridge?)
+
+projects
+--------
+
 make personal site cool like about page of http://maryrosecook.com/
 
 *new internet*: automatically hide all links to anything it knows you've seen
