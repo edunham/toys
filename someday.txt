@@ -25,6 +25,8 @@ so computer can train person to accomplish goals
         willingness to write UI stuff
         test subjects
 
+    also, time tracking. but easy. this might already exist.
+
 figure out natural-ish makeup to fool security cameras
     prereqs: 
         samples of face recognition software
