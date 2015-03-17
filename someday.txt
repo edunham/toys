@@ -18,6 +18,11 @@ animatronic LoL poro
 talks/projects:
 ---------------
 
+because i don't obsess over the thing enough, i want *an android widget of my
+github contributions calendar*. update every time i'm on wifi; use cached
+version the rest of the time. 
+
+
 apply psych principles (conditioning, spaced repetition, whatever else) to UI
 so computer can train person to accomplish goals
     prereqs:
