@@ -18,6 +18,12 @@ animatronic LoL poro
 talks/projects:
 ---------------
 
+meme message: A command-line wrapper for `git commit` that would take an image
+URL, convert the image to ASCII art, and stick it at the end of the long-form
+commit message. Alternately, pre-ascii-ify the top n memes and permit `git
+commit -m <memename>`
+
+
 because i don't obsess over the thing enough, i want *an android widget of my
 github contributions calendar*. update every time i'm on wifi; use cached
 version the rest of the time. 
