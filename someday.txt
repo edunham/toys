@@ -18,6 +18,12 @@ animatronic LoL poro
 talks/projects:
 ---------------
 
+crowd-source finishing the starwars asciimation (towel.blinkenlights.nl) with
+frames submitted by PR and verified by code review. automate code review
+process of comparing gif of frames to submitted ascii. this is a nobler cause
+than "emoji dick", and it managed to happen...
+
+
 meme message: A command-line wrapper for `git commit` that would take an image
 URL, convert the image to ASCII art, and stick it at the end of the long-form
 commit message. Alternately, pre-ascii-ify the top n memes and permit `git
