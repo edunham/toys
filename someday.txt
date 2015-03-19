@@ -7,33 +7,27 @@ Reads:
 https://www.hanken.fi/en/news/doctoral-thesis-right-fork-code-makes-open-source-software-breeding-ground-innovation
 http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 
+Software to Build
+=================
 
-Plushies:
----------
+Distributed collaboration platform
+----------------------------------
 
-Cthulhu pony https://twitter.com/io9/status/418831597593690112/photo/1
-
-animatronic LoL poro
-
-talks/projects:
----------------
-
-crowd-source finishing the starwars asciimation (towel.blinkenlights.nl) with
-frames submitted by PR and verified by code review. automate code review
-process of comparing gif of frames to submitted ascii. this is a nobler cause
+crowd-source finishing the starwars asciimation (towel.blinkenlights.nl) with   
+frames submitted by PR and verified by code review. automate code review        
+process of comparing gif of frames to submitted ascii. this is a nobler cause   
 than "emoji dick", and it managed to happen...
 
+Command-Line Image Tools
+------------------------
 
 meme message: A command-line wrapper for `git commit` that would take an image
 URL, convert the image to ASCII art, and stick it at the end of the long-form
 commit message. Alternately, pre-ascii-ify the top n memes and permit `git
 commit -m <memename>`
 
-
-because i don't obsess over the thing enough, i want *an android widget of my
-github contributions calendar*. update every time i'm on wifi; use cached
-version the rest of the time. 
-
+Train Computers to Train People
+-------------------------------
 
 apply psych principles (conditioning, spaced repetition, whatever else) to UI
 so computer can train person to accomplish goals
@@ -44,26 +38,8 @@ so computer can train person to accomplish goals
 
     also, time tracking. but easy. this might already exist.
 
-figure out natural-ish makeup to fool security cameras
-    prereqs: 
-        samples of face recognition software
-        makeup
-        volunteers?
-
-time management stuff that uses phone debug data dump (screen on times, etc,
-like shown on battery history) to make better picture of how time is spent
-    prereqs:
-        clearer goal
-        willingness to touch Android
-
-slides tools stuff (bridge?)
-
-algorithmic complexity and you (in progress)
-
-projects
---------
-
-make personal site cool like about page of http://maryrosecook.com/
+Internet of New Things
+----------------------
 
 *new internet*: automatically hide all links to anything it knows you've seen
 before -- gracefully skip repeated images by repeating whatever action got you
@@ -72,7 +48,11 @@ things you browse. Visualize net of the internet pages one actually visits,
 and net of "potential interests" that're often linked from things you go to
 but haven't been clicked yet.
 
-Bobcat Box of Books: kinda like http://www.bobcatinabox.com/ but $5/month and
+
+Bobcat Box of Books
+-------------------
+
+kinda like http://www.bobcatinabox.com/ but $5/month and
 send books it thinks you'll like, or which complete your collection, or w/e 
     prereqs: 
         home library catalog type sw
@@ -85,13 +65,55 @@ send books it thinks you'll like, or which complete your collection, or w/e
             irrelevant books from collection, to fund the habit of acquiring
             more?
 
-Label the Cookies
------------------
 
-http://edunham.net/2015/02/04/please_license_your_code.html would do super
-well with a thingy that uses the GitHub API and you give it a GH username and
-it looks at all their public repos and repos contributed to and points out
-which ones are missing a LICENSE file
+
+Phone Apps
+==========
+
+Easier Access to Gamification Data
+----------------------------------
+
+because i don't obsess over the thing enough, i want *an android widget of my
+github contributions calendar*. update every time i'm on wifi; use cached
+version the rest of the time. 
+
+Creepines for a Good Cause
+--------------------------
+
+time management stuff that uses phone debug data dump (screen on times, etc,
+like shown on battery history) to make better picture of how time is spent
+    prereqs:
+        clearer goal
+        willingness to touch Android
+
+
+
+Hardware to Build
+=================
+
+Testing the Limits of Facial Recognition
+----------------------------------------
+
+figure out natural-ish makeup to fool security cameras
+    prereqs: 
+        samples of face recognition software
+        makeup
+        volunteers?
+
+
+
+Talks to Write
+==============
+
+slides tools stuff (bridge?)
+
+algorithmic complexity and you (in progress)
+
+
+Everything Else
+===============
+
+make personal site cool like about page of http://maryrosecook.com/
 
 
 vanity domains
@@ -175,15 +197,6 @@ tracing?
 possible collaboration between houses, as well -- refrigerator could put its
 chill cycle after fitbit says you're asleep; appliances could do their
 white-noise thing to mask it when the neighbors are being loud. 
-
-hieroglyph2beamer
------------------
-
-rst2pdf does not meet my needs. sphinx latex builder is too general-purpose.
-
-http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc
-is a pandoc thing i guess; http://johnmacfarlane.net/pandoc/demos.html
-suggests it might be the answer. need to test that out.
 
 extra brain
 -----------
