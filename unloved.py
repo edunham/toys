@@ -39,6 +39,9 @@ for p in projects:
                                     cwd = repos + p).split('\n')
         dates[parse_date(s[2])] = p
     except:
+        # TODO: handle case where dir contains no files (only subdirs) and
+        # those subdirs are git repos. Perhaps recursively, without following
+        # links.
         needs_git.append(p)
 
 print "Projects that need love"
