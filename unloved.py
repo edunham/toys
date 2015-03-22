@@ -7,11 +7,12 @@ import datetime
 """
 Find unloved projects.
 
-I have ~/code/ on my system, which is full of git repositories. I'd like to
-list those projects and: 
+I have a directory of all my code repositories on my system. This file resides
+in the toys repo. Its purpose is to look up one directory, list those projects
+and:
+
     * Complain about those which aren't initialized as git repos
     * Sort by most distant date of latest commit
-    * Complain about the ones lacking licenses  
 """
 
 def parse_date(d):
@@ -25,7 +26,7 @@ def parse_date(d):
     # datetime(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]])
     return datetime.datetime(year, month, day, hour, minute, second) 
 
-repos = '/home/miea/code/'
+repos = '../'
 
 projects = os.listdir(repos)
 
@@ -47,4 +48,5 @@ for i in sorted(dates):
 
 print "Projects that need Git"
 
-print needs_git
+for g in needs_git:
+    print "\t"+g
