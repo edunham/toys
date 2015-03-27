@@ -65,6 +65,11 @@ send books it thinks you'll like, or which complete your collection, or w/e
             irrelevant books from collection, to fund the habit of acquiring
             more?
 
+Git Auto-Track
+--------------
+
+Script to update master to match origin/master in all git repos in a directory
+if possible, and list those where it's impossible
 
 
 Phone Apps
@@ -100,6 +105,11 @@ figure out natural-ish makeup to fool security cameras
         makeup
         volunteers?
 
+Charging More
+-------------
+
+Investigate whether it's possible to charge a phone via a headphone jack if
+the volume is loud, such as in the armrest of an older plane without outlets.
 
 
 Talks to Write
@@ -108,6 +118,15 @@ Talks to Write
 slides tools stuff (bridge?)
 
 algorithmic complexity and you (in progress)
+
+Posts or other docs to write
+============================
+
+Everything one needs to know to work on $PROJECT offline
+
+How a modern "devops" stack goes together and where all the buzzwords fit 
+    ("Which tool should I use?" type starter)
+
 
 
 Everything Else
