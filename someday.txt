@@ -65,13 +65,6 @@ send books it thinks you'll like, or which complete your collection, or w/e
             irrelevant books from collection, to fund the habit of acquiring
             more?
 
-Git Auto-Track
---------------
-
-Script to update master to match origin/master in all git repos in a directory
-if possible, and list those where it's impossible
-
-
 Phone Apps
 ==========
 
@@ -90,7 +83,6 @@ like shown on battery history) to make better picture of how time is spent
     prereqs:
         clearer goal
         willingness to touch Android
-
 
 
 Hardware to Build
@@ -119,6 +111,7 @@ slides tools stuff (bridge?)
 
 algorithmic complexity and you (in progress)
 
+
 Posts or other docs to write
 ============================
 
@@ -126,8 +119,6 @@ Everything one needs to know to work on $PROJECT offline
 
 How a modern "devops" stack goes together and where all the buzzwords fit 
     ("Which tool should I use?" type starter)
-
-
 
 Everything Else
 ===============
@@ -227,3 +218,19 @@ something for tracking all these damn projects
 -----------------------------------------------
 
 vague ideas, status, idea groups, in-progresses, research.
+
+
+Solved Problems
+===============
+
+Git Auto-Track
+--------------
+
+Script to update master to match origin/master in all git repos in a directory
+if possible, and list those where it's impossible
+
+The tool is called repo
+
+https://source.android.com/source/developing.html
+
+
