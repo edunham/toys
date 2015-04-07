@@ -103,6 +103,12 @@ Charging More
 Investigate whether it's possible to charge a phone via a headphone jack if
 the volume is loud, such as in the armrest of an older plane without outlets.
 
+candy sorting robot
+-------------------
+
+sort small candies, including jelly beans, by color using opencv and some
+servos. 
+
 
 Talks to Write
 ==============
