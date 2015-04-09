@@ -1,0 +1,44 @@
+\documentclass{standalone}
+\usepackage{tikz}
+% from http://tex.stackexchange.com/questions/58702/creating-gears-in-tikz
+
+\newcommand{\gear}[3]{%
+  \def\modu{#1}
+  \def\Zb{#2}
+  \def\AngleA{#3}
+
+  \pgfmathsetmacro{\Rpr}{\Zb*\modu/2}
+  \pgfmathsetmacro{\Rb}{\Rpr*cos(\AngleA)}
+  \pgfmathsetmacro{\Rt}{\Rpr+\modu}
+  \pgfmathsetmacro{\Rp}{\Rpr-1.25*\modu}
+  \pgfmathsetmacro{\AngleT}{pi/180*acos(\Rb/\Rt)}
+  \pgfmathsetmacro{\AnglePr}{pi/180*acos(\Rb/\Rpr)}
+  \pgfmathsetmacro{\demiAngle}{180/\Zb}
+  \pgfmathsetmacro{\Angledecal}{(\demiAngle-2*\AnglePr)/2}
+
+  \foreach \zz in{1,2,...,\Zb}{
+    \draw [line width=3]
+    ({(\zz))/\Zb*360-\Angledecal}:\Rb)
+    -- (\zz/\Zb*360-\Angledecal:\Rp)
+    to[bend right=\demiAngle]
+    (\zz/\Zb*360+\Angledecal:\Rp)
+    --
+    plot[domain=-0:\AngleT,smooth,variable=\t]
+    ({{180/pi*(-\t+tan(180/pi*\t))+\zz/\Zb*360+\Angledecal}:\Rb/cos(180/pi*\t)})
+    % 
+    to[bend right=\demiAngle]
+    ({{180/pi*(\AngleT+tan(180/pi*-\AngleT)) +(\zz+1)/\Zb*360-\Angledecal}:
+      \Rb/cos(180/pi*-\AngleT)})
+    % 
+    plot[domain=-\AngleT:-0,smooth,variable=\t]
+    ({{180/pi*(-\t+tan(180/pi*\t))+(\zz+1)/\Zb*360-\Angledecal}:\Rb/cos(180/pi*\t)});
+  }
+}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=0.2]
+\gear{3}{5}{20}
+\end{tikzpicture}
+
+\end{document}
