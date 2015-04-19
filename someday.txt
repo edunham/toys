@@ -10,6 +10,13 @@ http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 Software to Build
 =================
 
+image attribution simplifier
+----------------------------
+
+you give it a wikimedia url, it wget's the picture into the current directory
+and appends the appropriate credit information to credits.txt
+
+
 Distributed collaboration platform
 ----------------------------------
 
