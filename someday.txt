@@ -23,6 +23,17 @@ ASL-To-Text
 https://code.google.com/p/pp-usc-ss12-sign-language-reader/ has been dead
 sinced 2010. Will it still work? 
 
+human simulator
+---------------
+
+free, open-source, combine the allure of the sims and civ and stuff but with
+an easily scriptable api. possibly build Python-flavored scripting right into
+it? 
+
+interaction perhaps via either a df-ish ascii thing or IRC interaction. Could
+be basis for a chatbot that can actually follow a conversation... might just
+turn into good mud AI though.
+
 image attribution simplifier
 ----------------------------
 
