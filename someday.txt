@@ -72,6 +72,21 @@ send books it thinks you'll like, or which complete your collection, or w/e
             irrelevant books from collection, to fund the habit of acquiring
             more?
 
+madlibs etherpad
+----------------
+
+like a regular etherpad, but with 2 sides -- one where you write the skeleton, 
+and one where you fill in the blanks. 
+
+issue categorizer
+-----------------
+
+examine a github issue tracker and find bugs with certain traits: 
+
+* widely noticed -- n* the usual # of unique commenters
+* echo chamber / note to self -- comments only from 1 person
+* flapping -- often closed and reopened
+
 Phone Apps
 ==========
 
@@ -137,6 +152,11 @@ Everything Else
 ===============
 
 make personal site cool like about page of http://maryrosecook.com/
+
+decibel visualizer
+------------------
+
+cute desk toy that lights up brighter when the environment is louder
 
 
 vanity domains
