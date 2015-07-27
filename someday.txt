@@ -10,6 +10,12 @@ http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 Software to Build
 =================
 
+ASL-To-Text
+-----------
+
+https://code.google.com/p/pp-usc-ss12-sign-language-reader/ has been dead
+sinced 2010. Will it still work? 
+
 image attribution simplifier
 ----------------------------
 
