@@ -10,6 +10,13 @@ http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 Software to Build
 =================
 
+Calagator Schedulator
+---------------------
+
+* Automatically pull recurring events from meetup.com into calagator
+* Gather words-description of event (first thursday, third wednesday, etc.)
+  and suggest unoccupoied such times
+
 ASL-To-Text
 -----------
 
