@@ -7,8 +7,23 @@ Reads:
 https://www.hanken.fi/en/news/doctoral-thesis-right-fork-code-makes-open-source-software-breeding-ground-innovation
 http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 
-Software to Build
-=================
+Software to Build or Find
+=========================
+
+sysdiff
+-------
+
+Ansible-flavored tool to compare two systems to which one has SSH access.
+Several layers: 
+
+* Hardware. What're the diffs between processor, amount of ram, amount of
+  disk, etc.?
+* OS & Packages: what's the package manager say is installed? What do language
+  -specific managers say they have installed? What versions are they? What
+  version of Linux? Vanilla, or patched?
+* Filesystem/packages: Maybe piggyback on cleverness of rsync or similar? It'd
+  be nice to detect "A has buildbot installed at X and B has buildbot
+  installed at Y but they're the same Buildbot"
 
 Calagator Schedulator
 ---------------------
