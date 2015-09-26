@@ -23,6 +23,15 @@ ASL-To-Text
 https://code.google.com/p/pp-usc-ss12-sign-language-reader/ has been dead
 sinced 2010. Will it still work? 
 
+Station
+-------
+
+"chatops" through a security-optimized chat server. Adapters to IRC, Slack,
+Hipchat (how hard is it to have a single channel that exposes itself as all 3
+protocols?) for chat channels. Adapters to whatever identity source of truth
+(LDAP). Optimize for simplicity of plugging in infrastructure-touching tools
+-- monitoring, CM, etc. 
+
 human simulator
 ---------------
 
