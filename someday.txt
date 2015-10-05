@@ -76,6 +76,11 @@ so computer can train person to accomplish goals
         willingness to write UI stuff
         test subjects
 
+    Personal gamification. The device of reward-for-action then timeout before
+    next time the action can trigger a reward, as well as rewards at fixed
+    sums of cumulative points, seems powerful. The trick is accurately
+    calibrating those cooldown periods to correspond to real life. 
+
     also, time tracking. but easy. this might already exist.
 
 Internet of New Things
