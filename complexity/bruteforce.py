@@ -3,7 +3,7 @@
 def brute_force_search(l, value):
     for i in range(len(l)):
         if l[i] == value:
-        return i
+            return i
     return -1
 
 if __name__ == "__main__":
