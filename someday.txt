@@ -140,6 +140,8 @@ examine a github issue tracker and find bugs with certain traits:
 * echo chamber / note to self -- comments only from 1 person
 * flapping -- often closed and reopened
 
+A similar thing in progress is at https://github.com/servo/servo-starters
+
 Phone Apps
 ==========
 
@@ -183,14 +185,6 @@ candy sorting robot
 
 sort small candies, including jelly beans, by color using opencv and some
 servos. 
-
-
-Talks to Write
-==============
-
-slides tools stuff (bridge?)
-
-algorithmic complexity and you (in progress)
 
 
 Posts or other docs to write
@@ -319,4 +313,6 @@ The tool is called repo
 
 https://source.android.com/source/developing.html
 
+The thing I actually wanted was 
 
+http://myrepos.branchable.com/
