@@ -7,6 +7,20 @@ Reads:
 https://www.hanken.fi/en/news/doctoral-thesis-right-fork-code-makes-open-source-software-breeding-ground-innovation
 http://kukuruku.co/hub/diy/usb-killer?ModPagespeed=noscript
 
+arts
+----
+
+average linkedin engineer -- take a data set of a bunch of engineers with the
+same job title on linkedin. of those with a mugshot type photo, average or
+composite the faces into a generic face. name is the most common 1st letter of
+each unique first name, then 2nd, and so on. job titles and descriptions come
+from a word-sized markov chain on the samples'. perhaps numbers get swapped
+for an average of all numbers in the set which appeared to have the same
+units? Company names might come from a character-wise markov chain on unique
+company names in the data set. then publish the recruiter emails it gets on a
+blog. 
+
+
 Software to Build or Find
 =========================
 
