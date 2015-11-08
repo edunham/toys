@@ -20,6 +20,16 @@ units? Company names might come from a character-wise markov chain on unique
 company names in the data set. then publish the recruiter emails it gets on a
 blog. 
 
+config management challenges -- they have these for security and programming,
+why not configs? types: 
+
+    * serverspec test that you have to make pass
+    * semi-working puppet/chef/salt/ansible config that you have to fix
+    * VM with running service, config must run first time without taking it
+      down (hard mode)
+    * competition mode where you point it at a github repo and a throwaway
+      host, possibly sandstorm.io, runs and tests the configs from the repo
+
 
 Software to Build or Find
 =========================
