@@ -30,6 +30,8 @@ why not configs? types:
     * competition mode where you point it at a github repo and a throwaway
       host, possibly sandstorm.io, runs and tests the configs from the repo
 
+deploy https://github.com/RichiH/vcsh for dotfiles repo
+
 
 Software to Build or Find
 =========================
