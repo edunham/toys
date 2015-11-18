@@ -2,8 +2,9 @@
 import urllib
 import time
 from subprocess import call
-url = "http://static-rust-lang-org.s3-website-us-west-1.amazonaws.com/dist/"
-url += time.strftime("%Y-%m-%d/")
+url =" http://static.rust-lang.org/dist/"
+url += time.strftime("%Y-%m-%d")
+url += "/rust-nightly-x86_64-unknown-linux-gnu.tar.gz"
 req = urllib.urlopen(url)
 code = req.getcode()
 message = "%s broken. fix it." % url
