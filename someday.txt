@@ -36,6 +36,13 @@ deploy https://github.com/RichiH/vcsh for dotfiles repo
 Software to Build or Find
 =========================
 
+what do
+-------
+
+like the easy issue aggregators, but for arbitrarily harder issues. should
+work across repos+orgs, search for all of an assignee, all unassigned, or all
+of a given tag per repo or per org
+
 sysdiff
 -------
 
