@@ -36,6 +36,13 @@ deploy https://github.com/RichiH/vcsh for dotfiles repo
 Software to Build or Find
 =========================
 
+Typo
+----
+
+Fuzzer to introduce common typographical errors into code. Find what's common
+from playground?
+
+
 what do
 -------
 
