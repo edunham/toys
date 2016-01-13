@@ -1,3 +1,4 @@
+ghcreds.py
 *.py[cod]
 chatbot/*.txt
 *.sw[op]
