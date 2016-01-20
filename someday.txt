@@ -214,6 +214,8 @@ figure out natural-ish makeup to fool security cameras
         makeup
         volunteers?
 
+http://cmusatyalab.github.io/openface/
+
 Charging More
 -------------
 
