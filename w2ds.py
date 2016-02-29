@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 def condense(w):
-    print w[0] + str(len(w)-2) + w[-1:]
+    return w[0] + str(len(w)-2) + w[-1:]
 
 def expand(w):
     length = int(w[1:-1]) + 2
@@ -17,11 +17,8 @@ if __name__ == "__main__":
     print "Words With Numbers In Them Thing"
     while(True):
         w = raw_input("Word: ")
-        try:
-            print "Condensed: "
-            condense(w)
-        except:
-            pass
+        print "Condensed: "
+        print ' '.join(condense(p) for p in w.split())
         try:
             print "Expanded: "
             expand(w)
