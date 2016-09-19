@@ -86,7 +86,7 @@ keys = ["stonehg",
         "hopeconf",
         "hopehope",
         "eleven",
-        ]
+        "this"]
 
 #print dec("WMPMMXXAEYHBRYOCA", "KILT")
 
