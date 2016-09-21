@@ -1,4 +1,4 @@
-acquire a microwriter keyboard: 
+acquire a microwriter keyboard:
 http://www.loper-os.org/?p=861
 
 Reads:
@@ -18,10 +18,10 @@ from a word-sized markov chain on the samples'. perhaps numbers get swapped
 for an average of all numbers in the set which appeared to have the same
 units? Company names might come from a character-wise markov chain on unique
 company names in the data set. then publish the recruiter emails it gets on a
-blog. 
+blog.
 
 config management challenges -- they have these for security and programming,
-why not configs? types: 
+why not configs? types:
 
     * serverspec test that you have to make pass
     * semi-working puppet/chef/salt/ansible config that you have to fix
@@ -54,7 +54,7 @@ sysdiff
 -------
 
 Ansible-flavored tool to compare two systems to which one has SSH access.
-Several layers: 
+Several layers:
 
 * Hardware. What're the diffs between processor, amount of ram, amount of
   disk, etc.?
@@ -76,7 +76,7 @@ ASL-To-Text
 -----------
 
 https://code.google.com/p/pp-usc-ss12-sign-language-reader/ has been dead
-sinced 2010. Will it still work? 
+sinced 2010. Will it still work?
 
 Station
 -------
@@ -85,14 +85,14 @@ Station
 Hipchat (how hard is it to have a single channel that exposes itself as all 3
 protocols?) for chat channels. Adapters to whatever identity source of truth
 (LDAP). Optimize for simplicity of plugging in infrastructure-touching tools
--- monitoring, CM, etc. 
+-- monitoring, CM, etc.
 
 human simulator
 ---------------
 
 free, open-source, combine the allure of the sims and civ and stuff but with
 an easily scriptable api. possibly build Python-flavored scripting right into
-it? 
+it?
 
 interaction perhaps via either a df-ish ascii thing or IRC interaction. Could
 be basis for a chatbot that can actually follow a conversation... might just
@@ -108,9 +108,9 @@ and appends the appropriate credit information to credits.txt
 Distributed collaboration platform
 ----------------------------------
 
-crowd-source finishing the starwars asciimation (towel.blinkenlights.nl) with   
-frames submitted by PR and verified by code review. automate code review        
-process of comparing gif of frames to submitted ascii. this is a nobler cause   
+crowd-source finishing the starwars asciimation (towel.blinkenlights.nl) with
+frames submitted by PR and verified by code review. automate code review
+process of comparing gif of frames to submitted ascii. this is a nobler cause
 than "emoji dick", and it managed to happen...
 
 Command-Line Image Tools
@@ -134,7 +134,7 @@ so computer can train person to accomplish goals
     Personal gamification. The device of reward-for-action then timeout before
     next time the action can trigger a reward, as well as rewards at fixed
     sums of cumulative points, seems powerful. The trick is accurately
-    calibrating those cooldown periods to correspond to real life. 
+    calibrating those cooldown periods to correspond to real life.
 
     also, time tracking. but easy. this might already exist.
 
@@ -153,8 +153,8 @@ Bobcat Box of Books
 -------------------
 
 kinda like http://www.bobcatinabox.com/ but $5/month and
-send books it thinks you'll like, or which complete your collection, or w/e 
-    prereqs: 
+send books it thinks you'll like, or which complete your collection, or w/e
+    prereqs:
         home library catalog type sw
         db of similarities between books -- Dewey + Amazon ratings??
         willingness (or painlessness) to actually catalog all existing books
@@ -168,13 +168,13 @@ send books it thinks you'll like, or which complete your collection, or w/e
 madlibs etherpad
 ----------------
 
-like a regular etherpad, but with 2 sides -- one where you write the skeleton, 
-and one where you fill in the blanks. 
+like a regular etherpad, but with 2 sides -- one where you write the skeleton,
+and one where you fill in the blanks.
 
 issue categorizer
 -----------------
 
-examine a github issue tracker and find bugs with certain traits: 
+examine a github issue tracker and find bugs with certain traits:
 
 * widely noticed -- n* the usual # of unique commenters
 * echo chamber / note to self -- comments only from 1 person
@@ -190,7 +190,7 @@ Easier Access to Gamification Data
 
 because i don't obsess over the thing enough, i want *an android widget of my
 github contributions calendar*. update every time i'm on wifi; use cached
-version the rest of the time. 
+version the rest of the time.
 
 Creepines for a Good Cause
 --------------------------
@@ -209,7 +209,7 @@ Testing the Limits of Facial Recognition
 ----------------------------------------
 
 figure out natural-ish makeup to fool security cameras
-    prereqs: 
+    prereqs:
         samples of face recognition software
         makeup
         volunteers?
@@ -226,7 +226,13 @@ candy sorting robot
 -------------------
 
 sort small candies, including jelly beans, by color using opencv and some
-servos. 
+servos.
+
+stilly straw
+------------
+
+A crazy straw with a heating/cooling element, so that your sippable food item
+would have its temperature corrected on demand.
 
 
 Posts or other docs to write
@@ -234,7 +240,7 @@ Posts or other docs to write
 
 Everything one needs to know to work on $PROJECT offline
 
-How a modern "devops" stack goes together and where all the buzzwords fit 
+How a modern "devops" stack goes together and where all the buzzwords fit
     ("Which tool should I use?" type starter)
 
 Everything Else
@@ -252,7 +258,7 @@ vanity domains
 --------------
 
 put in a precise nick and it finds for each 2 or 3-char substring whether a)
-that's a TLD, b) the stuff before it is available as a domain. 
+that's a TLD, b) the stuff before it is available as a domain.
 
 falling off the internet
 ------------------------
@@ -262,13 +268,17 @@ of own browsing/download history, find what's NOT on archive.org
 combine  http://domaininferno.com/ and archive.org to find the content that
 has lost its names
 
+The former might be solved by
+https://addons.mozilla.org/en-US/firefox/addon/archiveror/
+
+
 reed->read->red
 ---------------
 
 i want a thing to track stuff i ought to read eventually. it ought not tell
 others, except perhaps publishing summaries/reviews. ought to save a URL of a
 post, or download a PDF, or track paper-books, with equal (hopefully lack of)
-difficulty. 
+difficulty.
 
 could(should)? be command line. might be awkward to enter paperbook data; json
 perhaps?
@@ -280,10 +290,10 @@ perhaps?
         and ought to read, but haven't time right away.
 
     read: command that gives me something to read, when i have time but not
-        ideas. 
+        ideas.
 
     red: some kind of action, summary or review, to take upon having
-        successfully read a thing. 
+        successfully read a thing.
 
 oh also, sorting between topics/hats would be rather nice. dev, ops, psych,
 philosophy, robots, meta, news, etc. possibly also handle time constraints?
@@ -299,7 +309,7 @@ https://www.youtube.com/watch?v=Y05wiQQbFLU at the recommendtation of
 http://imgur.com/gallery/fULGO thinking about how ambient, electronic music
 could be used as a 6th sense, of sorts, to monitor IoT devices' state. when
 something's working correctly it sings along with the house; when off it's
-quiet; when something is going wrong with it, it gets discordant. 
+quiet; when something is going wrong with it, it gets discordant.
 
 could be a gentler reminder of time-sensitive tasks by gradually transitioning
 into the times when actions need to be taken, reducing the amount of interrupt
@@ -307,13 +317,13 @@ into the times when actions need to be taken, reducing the amount of interrupt
 quit when the food was done, rather than just humm and then beep? the parents'
 washing machine plays a little tune when the wash is done rather than
 screeching like the drier does, and although it's less unpleasant, it's also
-really confusing when random music starts out of nowhere. 
+really confusing when random music starts out of nowhere.
 
 background tempo, pitch, and beats should probably be environmental
-temperature, presence/absence in room, electricity usage, etc. 
+temperature, presence/absence in room, electricity usage, etc.
 
 end goal is to hack greater connectedness with environment via enjoyable,
-non-interruptey, subconscious musical cues. 
+non-interruptey, subconscious musical cues.
 
 same thing could potentially be done with systems monitoring -- chunk each
 time segment of traffic into a beat, give a rhythm pattern to each service
@@ -324,11 +334,11 @@ i'm just a '90s kid but i still vividly recall the tone pattern of the modem
 dialing our ISP back in the day, and could tell from any deviations in the
 pattern whether it was connecting successfully or not... and that was like
 half my life ago. also, stick in a particular melody or "hook" for debug
-tracing? 
+tracing?
 
 possible collaboration between houses, as well -- refrigerator could put its
 chill cycle after fitbit says you're asleep; appliances could do their
-white-noise thing to mask it when the neighbors are being loud. 
+white-noise thing to mask it when the neighbors are being loud.
 
 extra brain
 -----------
@@ -355,6 +365,6 @@ The tool is called repo
 
 https://source.android.com/source/developing.html
 
-The thing I actually wanted was 
+The thing I actually wanted was
 
 http://myrepos.branchable.com/
