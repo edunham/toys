@@ -28,8 +28,11 @@ def read_traviscfg(path=".travis.yml"):
 
 def write_dockerfile(cfg, path="Dockerfile"):
     contents = "FROM ubuntu:16.04\n"
-    #contents += "RUN add-apt-repository ppa:george-edison55/cmake-3.x\n"
     contents += "RUN apt-get update --fix-missing\n"
+
+    # Cloning will someday be unnecessary
+    contents += "RUN apt-get install -y git\n"
+
     for f in cfg['matrix']['include'][1]['addons']['apt']['packages']:
         contents += "RUN apt-get install -y {0}\n".format(f)
 
