@@ -1,5 +1,16 @@
 #! /usr/bin/env python
 
+"""
+travis2dockerfile
+
+Dumb little script to turn .travis.yml build steps into a Dockerfile that
+tries to install the deps and run the steps.
+
+Currently also clones Servo, to avoid having to run it from a fork and keep
+the fork up to date and all that unpleasantness.
+
+"""
+
 import yaml
 
 
