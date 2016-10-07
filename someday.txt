@@ -351,6 +351,16 @@ something for tracking all these damn projects
 
 vague ideas, status, idea groups, in-progresses, research.
 
+netsplatter
+-----------
+
+it is hard to see what's going on with Freenode netsplits.
+
+Get a list of all Freenode server names.
+
+Connect one bot per server and put them all in a room together. Expose
+netsplit data based on who can see whom.
+
 
 Solved Problems
 ===============
