@@ -361,6 +361,16 @@ Get a list of all Freenode server names.
 Connect one bot per server and put them all in a room together. Expose
 netsplit data based on who can see whom.
 
+my etherpads
+------------
+
+keep track of all the etherpads I've spent time on in this browser profile.
+Offer a list of them, grouped by name similarity... or even searchable list
+based on substrings of the name. oh, & dates used.
+
+could be implemented with a magic cookie in etherpad sw itself, or as a
+browser extension.
+
 
 Solved Problems
 ===============
