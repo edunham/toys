@@ -65,6 +65,23 @@ Several layers:
   be nice to detect "A has buildbot installed at X and B has buildbot
   installed at Y but they're the same Buildbot"
 
+sysgrep
+-------
+
+"do I have a database installed?" even if it's not configured right or on the
+path
+
+sysstat
+-------
+
+maybe prereq to sysdiff -- "please tell me all the stuff I have installed and
+its versions". Might be doable through package manager, though I'd like to
+include all executables outside the homedir to account for manual
+installations of stuff. Print the output in a standardized way and it's half
+of sysdiff.
+
+sysstat
+
 Calagator Schedulator
 ---------------------
 
