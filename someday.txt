@@ -222,6 +222,14 @@ like shown on battery history) to make better picture of how time is spent
 Hardware to Build
 =================
 
+rimshot
+-------
+
+make one of the little iot computers listen to the noise levels in a room.
+when there's silence followed by that "ohhhh" that you say when someone said
+something that deserves a rimshot... it should hit a tiny drum twice then hit
+a tiny cymbal.
+
 Testing the Limits of Facial Recognition
 ----------------------------------------
 
