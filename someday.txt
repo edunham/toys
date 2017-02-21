@@ -199,6 +199,24 @@ examine a github issue tracker and find bugs with certain traits:
 
 A similar thing in progress is at https://github.com/servo/servo-starters
 
+Comic Rocket Batches
+--------------------
+
+It would be nice to have a feature where comic rocket only bumps a strip into
+your "things to read" section at the end of a book or chapter -- some comics
+are just better in large doses
+
+
+Speech-and-stuff To Text
+------------------------
+
+a) Command IoT devices using short whistled melodies or rhythms of claps.
+Easier to recognize offline(?). Blinkenlights to signal what it thinks it's
+hearing as feedback.
+
+b) Why do we not use whistles/snaps/claps/clicks as meta keys when voice
+typing? Is there a framework to handle that already?
+
 Phone Apps
 ==========
 
