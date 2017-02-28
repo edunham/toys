@@ -36,6 +36,16 @@ deploy https://github.com/RichiH/vcsh for dotfiles repo
 Software to Build or Find
 =========================
 
+Screenshot Screen Lock
+----------------------
+
+Screen lock keyboard shortcut to lock all connected monitors and use a
+screenshot of what was on them at the time of the shortcut instead of a
+regular lockscreen.
+
+Useful for confs where first slide of talk is up on the projector but you want
+to walk away.
+
 Typo
 ----
 
