@@ -227,6 +227,18 @@ hearing as feedback.
 b) Why do we not use whistles/snaps/claps/clicks as meta keys when voice
 typing? Is there a framework to handle that already?
 
+Game Mechanics
+==============
+
+out-of-commission
+-----------------
+
+universally fixed difficulty of world. Player starts with crazy OP avatar, so
+the tasks are easy. Leveling up removes the avatar's strength/skills/whatever,
+thus making world harder and require greater player skill / creativity to get
+around in. Could analogize to human aging or to mars rover.
+
+
 Phone Apps
 ==========
 
