@@ -4,10 +4,12 @@ The GitHub user interface shows me a list of notifications, but it's full of
 things I don't care about. This tries to automatically mark as read the
 categories of notifications that I don't want to get.
 
-Create ghcreds.py of the form:
+Create `ghcreds.py` containing:
+
 token="asdfjkl"
 
-where token comes from https://github.com/settings/tokens
+where token comes from https://github.com/settings/tokens and has the
+"notifications" scope.
 """
 
 
@@ -34,12 +36,17 @@ def is_merged(url):
 user = g.get_user() # Calling this with any args returns a nameduser
 notifications = user.get_notifications()
 for n in notifications:
-    print ""
-    print n
-    print "\tRepo: " + n.repository.name
-    print "\t" + n.subject.title
-    is_merged(n.subject.url)
-    print "\t\t" + n.subject.url
-    print "\t\t" + peopleify(n.subject.url)
-    print "\t\t" + n.subject.type
-    print "\tReason: " + n.reason
+    if "Auto merge of" in n.subject.title:
+        print n
+        print "^^ toss that one"
+    else:
+        print ""
+        print n
+        print "\tRepo: " + n.repository.name
+        print "\t" + n.subject.title
+        print "is merged?"
+        print is_merged(n.subject.url)
+        print "\t\t" + n.subject.url
+        print "\t\t" + peopleify(n.subject.url)
+        print "\t\t" + n.subject.type
+        print "\tReason: " + n.reason
