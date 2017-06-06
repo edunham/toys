@@ -192,6 +192,11 @@ send books it thinks you'll like, or which complete your collection, or w/e
             irrelevant books from collection, to fund the habit of acquiring
             more?
 
+Book Robot
+----------
+Point a webcam at a wall of bookshelves. And maybe a projector. Use image
+recognition to tell you where each book is. Bonus points for spotlighting it.
+
 madlibs etherpad
 ----------------
 
@@ -315,6 +320,22 @@ Everything Else
 ===============
 
 make personal site cool like about page of http://maryrosecook.com/
+
+Eco-friendly hipster lightbulbs
+--------------------------------
+
+So there's those lightbulbs with the glowy filament inside that look super
+pretty, but waste a bunch of power and get super hot, right? Well what if
+instead of basically making tiny fire you actually hid an LED in the base and
+the fillament was a highly lossy fibre optic cable so it'd glow evenly?
+
+Non-euclidean ruffles
+----------------------
+
+It would be super neat to instead of gathering fabric to get a frill, piece a
+bunch of shapes that don't tesselate flat or only tesselate on non-euclidean
+surfaces (kind of like that geometry through crochet book except actually
+predictable and wearable because woven fabric)
 
 decibel visualizer
 ------------------
