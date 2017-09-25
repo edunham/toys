@@ -33,18 +33,19 @@ def is_merged(url):
     return False
 
 def mark_read(n):
+    global fixed
     u = 'https://api.github.com/notifications/threads/'
     u += n.id
     u += '?access_token='
     u += ghcreds.token
     resp = requests.patch(u)
-    # print resp
     fixed += 1
 
 user = g.get_user() # Calling this with any args returns a nameduser
 notifications = user.get_notifications()
 
 for n in notifications:
+    global looked
     looked += 1
     # I don't want to be notified of merged changes.
     if is_merged(n.subject.url):
