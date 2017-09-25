@@ -19,12 +19,17 @@ import requests
 import json
 g = Github(ghcreds.token)
 fixed = 0
+looked = 0
 def is_merged(url):
     r = requests.get(url)
     if (r.ok):
         repo = json.loads(r.text or r.content)
         if "closed" in repo["state"]:
             return True
+        else:
+            print "\t" + str(repo["state"])
+    if r.headers['X-RateLimit-Remaining'] == '0':
+        exit("Rate limit exceeded. Try again later.")
     return False
 
 def mark_read(n):
@@ -40,9 +45,13 @@ user = g.get_user() # Calling this with any args returns a nameduser
 notifications = user.get_notifications()
 
 for n in notifications:
+    looked += 1
+    # I don't want to be notified of merged changes.
     if is_merged(n.subject.url):
         mark_read(n)
-    if "Auto merge of" in n.subject.title:
+    # I especially don't want to be notified of Homu's merges.
+    elif "Auto merge of" in n.subject.title:
         mark_read(n)
 
+print "Examined " + str(looked) + " notifications. "
 print "Cleared " + str(fixed) + " spurious notifications!"
