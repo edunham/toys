@@ -18,13 +18,7 @@ import ghcreds
 import requests
 import json
 g = Github(ghcreds.token)
-
-def peopleify(url):
-    url = url.replace("api.github.com/repos","github.com")
-    url = url.replace("issues","issue")
-    url = url.replace("pulls","pull")
-    return url
-
+fixed = 0
 def is_merged(url):
     r = requests.get(url)
     if (r.ok):
@@ -33,20 +27,22 @@ def is_merged(url):
             return True
     return False
 
+def mark_read(n):
+    u = 'https://api.github.com/notifications/threads/'
+    u += n.id
+    u += '?access_token='
+    u += ghcreds.token
+    resp = requests.patch(u)
+    # print resp
+    fixed += 1
+
 user = g.get_user() # Calling this with any args returns a nameduser
 notifications = user.get_notifications()
+
 for n in notifications:
+    if is_merged(n.subject.url):
+        mark_read(n)
     if "Auto merge of" in n.subject.title:
-        print n
-        print "^^ toss that one"
-    else:
-        print ""
-        print n
-        print "\tRepo: " + n.repository.name
-        print "\t" + n.subject.title
-        print "is merged?"
-        print is_merged(n.subject.url)
-        print "\t\t" + n.subject.url
-        print "\t\t" + peopleify(n.subject.url)
-        print "\t\t" + n.subject.type
-        print "\tReason: " + n.reason
+        mark_read(n)
+
+print "Cleared " + str(fixed) + " spurious notifications!"
