@@ -52,3 +52,17 @@ def math_toy_volume(n):
 
 def math_toy_pieces(n):
     return sum(range(1,n+1))
+
+# Anyways I want the ones that have any hope of packing into a square box so I
+# need to get the factors of the area and then find dups in the list of factors.
+# From https://stackoverflow.com/questions/6800193/what-is-the-most-efficient-way-of-finding-all-the-factors-of-a-number-in-python
+# I get:
+
+def factors(n):
+    return set(reduce(list.__add__,
+                ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+
+
+for i in range(1,21):
+    n = math_toy_volume(i)
+    print str(n) + "\t" + str(sorted(factors(n)))
