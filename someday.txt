@@ -477,3 +477,9 @@ https://source.android.com/source/developing.html
 The thing I actually wanted was
 
 http://myrepos.branchable.com/
+
+
+Talk Ideas
+==========
+
+* Digital self care. Things like, of your top used commands in bash_history, why aren't more of them aliases?
