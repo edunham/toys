@@ -53,6 +53,12 @@ freq
 Guesses what symbol goes with what English letter when given a file with
 space-separated symbols, of letter-to-symbol encrypted English (probably).
 
+ics
+---
+
+Tell it who you want to remember to talk to. Import the .ics file it emits into your calendar. Your calendar will remind you to talk to the people you wanted to.
+
+
 lugmeetings
 -----------
 
