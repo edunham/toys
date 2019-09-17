@@ -90,7 +90,7 @@ include all executables outside the homedir to account for manual
 installations of stuff. Print the output in a standardized way and it's half
 of sysdiff.
 
-sysstat
+for the above 3, investigate https://osquery.io/
 
 Calagator Schedulator
 ---------------------
